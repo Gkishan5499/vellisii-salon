@@ -1,0 +1,14 @@
+{
+  "name": "Vellisii Salon",
+  "description": "Step into luxury. A premium hair, skin, and wellness destination specializing in transformations.",
+  "requestFramePermissions": [
+    "camera",
+    "microphone",
+    "geolocation"
+  ],
+  "majorCapabilities": [
+    "Booking System",
+    "Service Catalog",
+    "Luxury UI/UX"
+  ]
+}

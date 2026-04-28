@@ -1,0 +1,110 @@
+import { motion, AnimatePresence } from 'motion/react';
+import { useState } from 'react';
+import { X, Maximize2 } from 'lucide-react';
+
+const categories = ['All', 'Hair', 'Skin', 'Nails', 'Interiors'];
+
+const galleryItems = [
+  { id: 1, type: 'Hair', image: 'https://images.unsplash.com/photo-1633681926022-84c23e8cb2d6?auto=format&fit=crop&q=80&w=800', title: 'Signature Style' },
+  { id: 2, type: 'Skin', image: 'https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?auto=format&fit=crop&q=80&w=800', title: 'Radiance Glow' },
+  { id: 3, type: 'Nails', image: 'https://images.unsplash.com/photo-1604654894611-6973b376cbde?auto=format&fit=crop&q=80&w=800', title: 'Luxury Manicure' },
+  { id: 4, type: 'Interiors', image: 'https://images.unsplash.com/photo-1522337621169-423588262e08?auto=format&fit=crop&q=80&w=1000', title: 'The Main Suite' },
+  { id: 5, type: 'Hair', image: 'https://images.unsplash.com/photo-1560869713-7d0a29430803?auto=format&fit=crop&q=80&w=800', title: 'Precision Cut' },
+  { id: 6, type: 'Skin', image: 'https://images.unsplash.com/photo-1512290923902-8a9f81dc2069?auto=format&fit=crop&q=80&w=800', title: 'Dermal Therapy' },
+  { id: 7, type: 'Nails', image: 'https://images.unsplash.com/photo-1519415510236-8557bada8b09?auto=format&fit=crop&q=80&w=800', title: 'Bespoke Art' },
+  { id: 8, type: 'Interiors', image: 'https://images.unsplash.com/photo-1527799820374-dcf8d9d4a388?auto=format&fit=crop&q=80&w=800', title: 'Private Cabin' },
+];
+
+export default function Gallery() {
+  const [filter, setFilter] = useState('All');
+  const [selectedImage, setSelectedImage] = useState<string | null>(null);
+
+  const filteredItems = filter === 'All' 
+    ? galleryItems 
+    : galleryItems.filter(item => item.type === filter);
+
+  return (
+    <div className="pt-32 bg-luxury-black min-h-screen pb-32">
+      <div className="max-w-7xl mx-auto px-6">
+        <div className="text-center mb-20">
+          <h5 className="text-gold tracking-[0.4em] uppercase text-xs mb-4">Portfolio</h5>
+          <h1 className="text-5xl md:text-7xl font-serif mb-8 leading-tight italic">Our <span className="not-italic">Masterpieces</span></h1>
+          
+          <div className="flex flex-wrap justify-center gap-4 mt-12">
+            {categories.map((cat) => (
+              <button
+                key={cat}
+                onClick={() => setFilter(cat)}
+                className={`px-8 py-3 text-[10px] tracking-[0.3em] uppercase font-bold transition-all border ${
+                  filter === cat ? 'bg-gold text-luxury-black border-gold' : 'border-white/10 text-white/40 hover:border-gold hover:text-gold'
+                }`}
+              >
+                {cat}
+              </button>
+            ))}
+          </div>
+        </div>
+
+        <motion.div 
+          layout
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6"
+        >
+          <AnimatePresence mode='popLayout'>
+            {filteredItems.map((item) => (
+              <motion.div
+                key={item.id}
+                layout
+                initial={{ opacity: 0, scale: 0.9 }}
+                animate={{ opacity: 1, scale: 1 }}
+                exit={{ opacity: 0, scale: 0.9 }}
+                transition={{ duration: 0.5 }}
+                className="group relative aspect-square overflow-hidden cursor-zoom-in"
+                onClick={() => setSelectedImage(item.image)}
+              >
+                <img 
+                  src={item.image} 
+                  alt={item.title} 
+                  className="w-full h-full object-cover transition-transform duration-[1s] group-hover:scale-110 grayscale group-hover:grayscale-0"
+                />
+                <div className="absolute inset-0 bg-luxury-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col justify-end p-8 border-2 border-gold/40 border-inset">
+                   <div className="translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
+                      <p className="text-gold text-[10px] tracking-[0.3em] uppercase mb-1">{item.type}</p>
+                      <h4 className="text-xl font-serif">{item.title}</h4>
+                      <Maximize2 size={16} className="text-white/40 mt-4" />
+                   </div>
+                </div>
+              </motion.div>
+            ))}
+          </AnimatePresence>
+        </motion.div>
+      </div>
+
+      {/* Lightbox */}
+      <AnimatePresence>
+        {selectedImage && (
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            className="fixed inset-0 z-[100] bg-luxury-black/95 flex items-center justify-center p-6 lg:p-20"
+            onClick={() => setSelectedImage(null)}
+          >
+             <button 
+               className="absolute top-10 right-10 text-gold hover:text-white transition-colors"
+               onClick={() => setSelectedImage(null)}
+             >
+                <X size={40} />
+             </button>
+             <motion.img 
+                initial={{ scale: 0.9 }}
+                animate={{ scale: 1 }}
+                src={selectedImage} 
+                alt="Fullscreen Preview" 
+                className="max-w-full max-h-full object-contain shadow-2xl shadow-gold/20"
+             />
+          </motion.div>
+        )}
+      </AnimatePresence>
+    </div>
+  );
+}
