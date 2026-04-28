@@ -6,25 +6,25 @@ const serviceCategories = [
     id: 'hair',
     title: 'Hair Services',
     icon: <Scissors className="text-gold" />,
-    image: 'https://images.unsplash.com/photo-1560066984-138dadb4c035?auto=format&fit=crop&q=80&w=1200',
+    image: '/assets/images/service-hair.png',
     sections: [
       {
         name: 'Haircuts & Styling',
         items: [
-          { name: 'Creative Haircut (Men/Women)', price: 'Starting from $60' },
-          { name: 'Advanced Designer Cut (Senior Stylist)', price: 'Starting from $90' },
-          { name: 'Shampoo & Luxury Blow Dry', price: 'Starting from $45' },
-          { name: 'Ironing / Curling / Tong Styling', price: 'Starting from $50' },
+          { name: 'Creative Haircut (Men/Women)', price: 'Starting from ₹5,000' },
+          { name: 'Advanced Designer Cut (Senior Stylist)', price: 'Starting from ₹7,500' },
+          { name: 'Shampoo & Luxury Blow Dry', price: 'Starting from ₹3,500' },
+          { name: 'Ironing / Curling / Tong Styling', price: 'Starting from ₹4,000' },
           { name: 'Bridal & Occasion Hair Styling', price: 'Upon Consultation' },
         ]
       },
       {
         name: 'Hair Treatments',
         items: [
-          { name: 'Signature Hair Spa Rituals', price: 'Starting from $80' },
-          { name: 'Keratin / Smoothening', price: 'Starting from $250' },
-          { name: 'Hair Botox Therapy', price: 'Starting from $300' },
-          { name: 'Scalp Detox & Anti-Dandruff', price: 'Starting from $70' },
+          { name: 'Signature Hair Spa Rituals', price: 'Starting from ₹6,500' },
+          { name: 'Keratin / Smoothening', price: 'Starting from ₹20,000' },
+          { name: 'Hair Botox Therapy', price: 'Starting from ₹25,000' },
+          { name: 'Scalp Detox & Anti-Dandruff', price: 'Starting from ₹5,500' },
         ]
       }
     ]
@@ -33,22 +33,22 @@ const serviceCategories = [
     id: 'skin',
     title: 'Skin & Facial Therapies',
     icon: <Sparkles className="text-gold" />,
-    image: 'https://images.unsplash.com/photo-1512290923902-8a9f81dc2069?auto=format&fit=crop&q=80&w=1200',
+    image: '/assets/images/service-skin.png',
     sections: [
       {
         name: 'Luxury Facials',
         items: [
-          { name: 'Classic Clean-Up', price: '$50' },
-          { name: 'Gold / Diamond Facial', price: '$120' },
-          { name: 'Pigmentation Control', price: '$150' },
+          { name: 'Classic Clean-Up', price: '₹4,000' },
+          { name: 'Gold / Diamond Facial', price: '₹10,000' },
+          { name: 'Pigmentation Control', price: '₹12,000' },
         ]
       },
       {
         name: 'Advanced Aesthetics',
         items: [
-          { name: 'HydraFacial (Customised)', price: '$200' },
-          { name: 'Carboxy Facial', price: '$180' },
-          { name: 'BB Glow Treatment', price: '$220' },
+          { name: 'HydraFacial (Customised)', price: '₹15,000' },
+          { name: 'Carboxy Facial', price: '₹14,000' },
+          { name: 'BB Glow Treatment', price: '₹18,000' },
         ]
       }
     ]
@@ -57,16 +57,16 @@ const serviceCategories = [
     id: 'wellness',
     title: 'Spa & Wellness',
     icon: <Heart className="text-gold" />,
-    image: 'https://images.unsplash.com/photo-1544161515-4ab6ce6db874?auto=format&fit=crop&q=80&w=1200',
+    image: '/assets/images/massage-wellness.png',
     sections: [
       {
         name: 'Body Therapy',
         items: [
-          { name: 'Swedish Massage', price: '$100 (60 min)' },
-          { name: 'Deep Tissue Therapy', price: '$130 (60 min)' },
-          { name: 'Aroma Therapy', price: '$110 (60 min)' },
-          { name: 'Hot Stone Therapy', price: '$150 (90 min)' },
-          { name: 'Body Polishing', price: '$120' },
+          { name: 'Swedish Massage', price: '₹8,000 (60 min)' },
+          { name: 'Deep Tissue Therapy', price: '₹10,000 (60 min)' },
+          { name: 'Aroma Therapy', price: '₹9,000 (60 min)' },
+          { name: 'Hot Stone Therapy', price: '₹12,000 (90 min)' },
+          { name: 'Body Polishing', price: '₹10,000' },
         ]
       }
     ]

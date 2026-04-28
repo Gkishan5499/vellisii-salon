@@ -10,7 +10,7 @@ const slides = [
     subtitle: 'Luxury.',
     extra: 'Transformation',
     desc: 'At Vellisii, we blend international expertise with bespoke luxury to craft your perfect aesthetic journey.',
-    image: 'https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?auto=format&fit=crop&q=80&w=2000'
+    image: '/assets/images/hero-heritage.png'
   },
   {
     tagline: 'Artistry Defined',
@@ -18,7 +18,7 @@ const slides = [
     subtitle: 'Scalp Rituals.',
     extra: 'Artistry',
     desc: 'Experience the precision of world-class stylists in an environment designed for total indulgence and creative expression.',
-    image: 'https://images.unsplash.com/photo-1560066984-138dadb4c035?auto=format&fit=crop&q=80&w=2000'
+    image: '/assets/images/hero-artistry.png'
   },
   {
     tagline: 'Scientific Radiance',
@@ -26,24 +26,24 @@ const slides = [
     subtitle: 'Aesthetics.',
     extra: 'Radiance',
     desc: 'Discover the future of skincare with our medical-grade therapies and holistic wellness rituals tailored for your unique skin.',
-    image: 'https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?auto=format&fit=crop&q=80&w=2000'
+    image: '/assets/images/hero-science.png'
   }
 ];
 
 const services = [
   {
     title: 'Hair Transformation',
-    image: 'https://images.unsplash.com/photo-1562322140-8baeececf3df?auto=format&fit=crop&q=80&w=800',
+    image: '/assets/images/service-hair.png',
     desc: 'Expert cutting, styling and luxury coloring rituals.'
   },
   {
     title: 'Advanced Skincare',
-    image: 'https://images.unsplash.com/photo-1512290923902-8a9f81dc2069?auto=format&fit=crop&q=80&w=800',
+    image: '/assets/images/service-skin.png',
     desc: 'Science-backed facial therapies for lasting radiance.'
   },
   {
     title: 'Nail Artistry',
-    image: 'https://images.unsplash.com/photo-1632345031435-8727f6897d53?auto=format&fit=crop&q=80&w=800',
+    image: '/assets/images/service-nails.png',
     desc: 'Premium extensions and bespoke creative designs.'
   }
 ];
@@ -226,7 +226,7 @@ export default function Home() {
             <div className="relative">
               <div className="aspect-[4/5] bg-luxury-black border border-gold/20 p-4">
                 <img 
-                  src="https://images.unsplash.com/photo-1560066984-138dadb4c035?auto=format&fit=crop&q=80&w=1000" 
+                  src="/assets/images/stylist-working.png" 
                   alt="Stylist working"
                   className="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700"
                 />
@@ -318,7 +318,7 @@ export default function Home() {
                 className="h-full pt-12"
               >
                 <img 
-                  src="https://images.unsplash.com/photo-1595475243692-3b49e0ca976c?auto=format&fit=crop&q=80&w=800" 
+                  src="/assets/images/service-hair.png" 
                   alt="Hair Color" 
                   className="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700 rounded-none"
                 />
@@ -330,7 +330,7 @@ export default function Home() {
                 className="h-full pb-12"
               >
                 <img 
-                  src="https://images.unsplash.com/photo-1521590832167-7bcbfaa6381f?auto=format&fit=crop&q=80&w=800" 
+                  src="/assets/images/hero-artistry.png" 
                   alt="Hair Styling" 
                   className="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700 rounded-none border border-gold/20 p-2"
                 />
@@ -353,7 +353,7 @@ export default function Home() {
                whileHover={{ scale: 0.98 }}
                className="md:col-span-2 md:row-span-2 relative overflow-hidden group cursor-pointer"
              >
-                <img src="https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?auto=format&fit=crop&q=80&w=1200" className="w-full h-full object-cover grayscale brightness-50 group-hover:scale-110 transition-transform duration-[2s]" alt="Skin" />
+                <img src="/assets/images/hero-science.png" className="w-full h-full object-cover grayscale brightness-50 group-hover:scale-110 transition-transform duration-[2s]" alt="Skin" />
                 <div className="absolute inset-0 p-10 flex flex-col justify-end bg-gradient-to-t from-luxury-black via-transparent to-transparent">
                   <h3 className="text-3xl font-serif mb-2">HydraFacial Elite</h3>
                   <p className="text-gold tracking-widest text-[10px] uppercase">Scientific Excellence</p>
@@ -364,7 +364,7 @@ export default function Home() {
                whileHover={{ scale: 0.98 }}
                className="md:col-span-2 md:row-span-1 relative overflow-hidden group cursor-pointer"
              >
-                <img src="https://images.unsplash.com/photo-1600948836101-f9ffda59d250?auto=format&fit=crop&q=80&w=1200" className="w-full h-full object-cover grayscale brightness-50 group-hover:scale-110 transition-transform duration-[2s]" alt="Massage" />
+                <img src="/assets/images/massage-wellness.png" className="w-full h-full object-cover grayscale brightness-50 group-hover:scale-110 transition-transform duration-[2s]" alt="Massage" />
                 <div className="absolute inset-x-0 bottom-0 p-8 flex justify-between items-end bg-gradient-to-t from-luxury-black to-transparent">
                    <h3 className="text-2xl font-serif">Body Wellness</h3>
                    <ArrowRight className="text-gold group-hover:translate-x-2 transition-transform" />
@@ -375,7 +375,7 @@ export default function Home() {
                whileHover={{ scale: 0.98 }}
                className="md:col-span-1 md:row-span-1 relative overflow-hidden group cursor-pointer"
              >
-                <img src="https://images.unsplash.com/photo-1604654894611-6973b376cbde?auto=format&fit=crop&q=80&w=1200" className="w-full h-full object-cover grayscale brightness-50 group-hover:scale-110 transition-transform duration-[2s]" alt="Nails" />
+                <img src="/assets/images/service-nails.png" className="w-full h-full object-cover grayscale brightness-50 group-hover:scale-110 transition-transform duration-[2s]" alt="Nails" />
                 <div className="absolute inset-0 p-6 flex flex-col justify-center text-center backdrop-blur-sm opacity-0 group-hover:opacity-100 transition-opacity">
                    <h3 className="text-xl font-serif">Nail Artistry</h3>
                    <p className="text-gold text-[8px] tracking-widest uppercase mt-2">Bespoke Designs</p>
@@ -409,7 +409,7 @@ export default function Home() {
           </motion.p>
           <div className="flex flex-col items-center">
             <div className="w-16 h-16 rounded-full overflow-hidden border-2 border-gold mb-4">
-              <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&q=80&w=150" alt="Client" />
+              <img src="/assets/images/client-testimonial.png" alt="Client" />
             </div>
             <h5 className="text-white tracking-widest text-sm uppercase">Eleanor Sterling</h5>
             <p className="text-gold text-[10px] tracking-[0.3em] uppercase mt-1">Loyal Guest</p>

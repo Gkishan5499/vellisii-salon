@@ -5,14 +5,14 @@ import { X, Maximize2 } from 'lucide-react';
 const categories = ['All', 'Hair', 'Skin', 'Nails', 'Interiors'];
 
 const galleryItems = [
-  { id: 1, type: 'Hair', image: 'https://images.unsplash.com/photo-1633681926022-84c23e8cb2d6?auto=format&fit=crop&q=80&w=800', title: 'Signature Style' },
-  { id: 2, type: 'Skin', image: 'https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?auto=format&fit=crop&q=80&w=800', title: 'Radiance Glow' },
-  { id: 3, type: 'Nails', image: 'https://images.unsplash.com/photo-1604654894611-6973b376cbde?auto=format&fit=crop&q=80&w=800', title: 'Luxury Manicure' },
-  { id: 4, type: 'Interiors', image: 'https://images.unsplash.com/photo-1522337621169-423588262e08?auto=format&fit=crop&q=80&w=1000', title: 'The Main Suite' },
-  { id: 5, type: 'Hair', image: 'https://images.unsplash.com/photo-1560869713-7d0a29430803?auto=format&fit=crop&q=80&w=800', title: 'Precision Cut' },
-  { id: 6, type: 'Skin', image: 'https://images.unsplash.com/photo-1512290923902-8a9f81dc2069?auto=format&fit=crop&q=80&w=800', title: 'Dermal Therapy' },
-  { id: 7, type: 'Nails', image: 'https://images.unsplash.com/photo-1519415510236-8557bada8b09?auto=format&fit=crop&q=80&w=800', title: 'Bespoke Art' },
-  { id: 8, type: 'Interiors', image: 'https://images.unsplash.com/photo-1527799820374-dcf8d9d4a388?auto=format&fit=crop&q=80&w=800', title: 'Private Cabin' },
+  { id: 1, type: 'Hair', image: '/assets/images/service-hair.png', title: 'Signature Style' },
+  { id: 2, type: 'Skin', image: '/assets/images/service-skin.png', title: 'Radiance Glow' },
+  { id: 3, type: 'Nails', image: '/assets/images/service-nails.png', title: 'Luxury Manicure' },
+  { id: 4, type: 'Interiors', image: '/assets/images/hero-heritage.png', title: 'The Main Suite' },
+  { id: 5, type: 'Hair', image: '/assets/images/gallery-hair-2.png', title: 'Precision Cut' },
+  { id: 6, type: 'Skin', image: '/assets/images/gallery-skin-2.png', title: 'Dermal Therapy' },
+  { id: 7, type: 'Nails', image: '/assets/images/service-nails.png', title: 'Bespoke Art' },
+  { id: 8, type: 'Interiors', image: '/assets/images/salon-interior-2.png', title: 'Private Cabin' },
 ];
 
 export default function Gallery() {

@@ -39,7 +39,7 @@ export default function About() {
         <div className="relative">
           <div className="aspect-[3/4] border border-gold/20 p-4">
              <img 
-               src="https://images.unsplash.com/photo-1595475243692-3b49e0ca976c?auto=format&fit=crop&q=80&w=1000" 
+               src="/assets/images/hero-heritage.png" 
                alt="Modern Salon Interior" 
                className="w-full h-full object-cover grayscale brightness-75"
              />

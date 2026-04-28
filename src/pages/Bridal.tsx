@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 const bridalPackages = [
   {
     name: 'The Royal Bride',
-    price: '$1,200',
+    price: '₹1,00,000',
     desc: 'The ultimate luxury experience spanning across two days to ensure perfection.',
     features: [
       'Traditional or Airbrush HD Makeup',
@@ -18,7 +18,7 @@ const bridalPackages = [
   },
   {
     name: 'The Classic Muse',
-    price: '$750',
+    price: '₹60,000',
     desc: 'Bespoke elegance for the modern bride who values minimalist luxury.',
     features: [
       'Bespoke Bridal Makeup',
@@ -30,7 +30,7 @@ const bridalPackages = [
   },
   {
     name: 'Groom Luxury Suite',
-    price: '$350',
+    price: '₹25,000',
     desc: 'Precision grooming for the modern gentleman.',
     features: [
       'Professional Wedding Haircut',
@@ -49,7 +49,7 @@ export default function Bridal() {
       <section className="relative h-[60vh] flex items-center overflow-hidden mb-32">
         <div className="absolute inset-0 z-0">
           <img 
-            src="https://images.unsplash.com/photo-1595152244501-995bc9a07d0f?auto=format&fit=crop&q=80&w=2000" 
+            src="/assets/images/bridal-hero.png" 
             alt="Bridal Luxury"
             className="w-full h-full object-cover brightness-[0.3]"
           />

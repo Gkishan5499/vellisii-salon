@@ -29,7 +29,7 @@ export default function Contact() {
               >
                  <Phone className="text-gold mb-6" size={28} />
                  <h4 className="text-gold tracking-[0.2em] uppercase text-[10px] mb-2 font-medium">Call Us</h4>
-                 <p className="text-xl font-serif">+1 (555) 123-4567</p>
+                 <p className="text-xl font-serif">+91 98765 43210</p>
                  <p className="text-white/30 text-xs mt-2">Mon - Sat: 9am - 8pm</p>
               </motion.div>
               
@@ -48,7 +48,7 @@ export default function Contact() {
                <MapPin className="text-gold mb-6" size={28} />
                <h4 className="text-gold tracking-[0.2em] uppercase text-[10px] mb-2 font-medium">Visit Our Atelier</h4>
                <p className="text-2xl font-serif mb-4 leading-relaxed">
-                 123 Luxury Avenue, Fashion District,<br />New York, NY 10001
+                 Main Road, Itanagar,<br />Arunachal Pradesh 791111
                </p>
                <div className="pt-6 border-t border-white/5">
                  <h5 className="text-white/60 uppercase text-[10px] tracking-[0.3em] mb-4">Opening Hours</h5>
@@ -80,7 +80,7 @@ export default function Contact() {
              {/* Abstract Map Background Placeholder */}
              <div className="absolute inset-0 grayscale opacity-40 mix-blend-overlay pointer-events-none">
                 <img 
-                  src="https://images.unsplash.com/photo-1524661135-423995f22d0b?auto=format&fit=crop&q=80&w=1500" 
+                  src="/assets/images/salon-exterior.png" 
                   alt="City Map" 
                   className="w-full h-full object-cover"
                 />

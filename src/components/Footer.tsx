@@ -35,7 +35,7 @@ export default function Footer() {
           <ul className="space-y-4 text-sm text-white/60">
             <li className="flex items-center space-x-3">
               <Phone size={16} className="text-gold" />
-              <span>+1 (555) 123-4567</span>
+              <span>+91 98765 43210</span>
             </li>
             <li className="flex items-center space-x-3">
               <Mail size={16} className="text-gold" />
@@ -43,7 +43,7 @@ export default function Footer() {
             </li>
             <li className="flex items-start space-x-3">
               <MapPin size={16} className="text-gold mt-1" />
-              <span>123 Luxury Avenue, Fashion District,<br />New York, NY 10001</span>
+              <span>Main Road, Itanagar,<br />Arunachal Pradesh 791111</span>
             </li>
           </ul>
         </div>
