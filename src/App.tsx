@@ -4,11 +4,12 @@ import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import Home from './pages/Home';
 import About from './pages/About';
-import Services from './pages/Services';
 import Bridal from './pages/Bridal';
 import Gallery from './pages/Gallery';
 import Contact from './pages/Contact';
 import BookAppointment from './pages/BookAppointment';
+import Mansoon from './pages/Mansoon';
+import Eluminus from './pages/Eluminus';
 
 function ScrollToTop() {
   const { pathname } = useLocation();
@@ -28,11 +29,12 @@ export default function App() {
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/about" element={<About />} />
-            <Route path="/services" element={<Services />} />
             <Route path="/bridal" element={<Bridal />} />
             <Route path="/gallery" element={<Gallery />} />
             <Route path="/contact" element={<Contact />} />
             <Route path="/book" element={<BookAppointment />} />
+            <Route path="/mansoon" element={<Mansoon />} />
+            <Route path="/eluminus" element={<Eluminus />} />
             <Route path="*" element={<Home />} />
           </Routes>
         </main>

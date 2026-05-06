@@ -6,8 +6,9 @@ import { Menu, X, Instagram, Facebook, Phone } from 'lucide-react';
 const navLinks = [
   { name: 'Home', path: '/' },
   { name: 'About', path: '/about' },
-  { name: 'Services', path: '/services' },
   { name: 'Bridal', path: '/bridal' },
+  { name: 'Mansoon', path: '/mansoon' },
+  { name: 'Eluminus', path: '/eluminus' },
   { name: 'Gallery', path: '/gallery' },
   { name: 'Contact', path: '/contact' },
 ];

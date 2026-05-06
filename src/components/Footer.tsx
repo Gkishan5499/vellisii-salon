@@ -23,7 +23,6 @@ export default function Footer() {
           <h4 className="text-gold font-serif text-lg mb-6 tracking-wide underline underline-offset-8 decoration-gold/30">Quick Links</h4>
           <ul className="space-y-4 text-sm text-white/60">
             <li><Link to="/about" className="hover:text-gold transition-colors">About Us</Link></li>
-            <li><Link to="/services" className="hover:text-gold transition-colors">Our Services</Link></li>
             <li><Link to="/bridal" className="hover:text-gold transition-colors">Bridal Packages</Link></li>
             <li><Link to="/gallery" className="hover:text-gold transition-colors">Gallery</Link></li>
             <li><Link to="/book" className="hover:text-gold transition-colors">Book Now</Link></li>

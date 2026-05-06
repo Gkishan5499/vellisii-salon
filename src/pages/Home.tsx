@@ -32,19 +32,22 @@ const slides = [
 
 const services = [
   {
-    title: 'Hair Transformation',
-    image: '/assets/images/service-hair.png',
-    desc: 'Expert cutting, styling and luxury coloring rituals.'
+    title: 'Eluminus Range',
+    image: '/assets/images/eluminus-hero.png',
+    desc: 'Advanced hair molecular technology for extraordinary shine.',
+    path: '/eluminus'
   },
   {
-    title: 'Advanced Skincare',
-    image: '/assets/images/service-skin.png',
-    desc: 'Science-backed facial therapies for lasting radiance.'
+    title: 'Mansoon Special',
+    image: '/assets/images/mansoon-hero.png',
+    desc: 'Seasonal hair and skin rescue rituals for humid weather.',
+    path: '/mansoon'
   },
   {
-    title: 'Nail Artistry',
-    image: '/assets/images/service-nails.png',
-    desc: 'Premium extensions and bespoke creative designs.'
+    title: 'Bridal Artistry',
+    image: '/assets/images/bridal-hero.png',
+    desc: 'Bespoke bridal transformations for your special day.',
+    path: '/bridal'
   }
 ];
 
@@ -134,11 +137,11 @@ export default function Home() {
                       </span>
                     </Link>
                     
-                    <Link to="/services" className="group flex items-center space-x-4 text-white text-xs tracking-[0.3em] uppercase font-medium hover:text-gold transition-colors">
+                    <Link to="/eluminus" className="group flex items-center space-x-4 text-white text-xs tracking-[0.3em] uppercase font-medium hover:text-gold transition-colors">
                       <div className="w-12 h-12 rounded-full border border-white/20 flex items-center justify-center group-hover:border-gold transition-colors">
                         <Play size={14} className="fill-current ml-1" />
                       </div>
-                      <span>Our Rituals</span>
+                      <span>Explore Eluminus</span>
                     </Link>
                   </div>
                 </motion.div>
@@ -248,8 +251,8 @@ export default function Home() {
               <h5 className="text-gold tracking-[0.4em] uppercase text-sm mb-4">Our Craft</h5>
               <h2 className="text-4xl md:text-6xl font-serif">Signature <span className="italic">Experiences</span></h2>
             </div>
-            <Link to="/services" className="group flex items-center space-x-3 text-gold tracking-[0.2em] uppercase text-xs">
-              <span>View All Services</span>
+            <Link to="/eluminus" className="group flex items-center space-x-3 text-gold tracking-[0.2em] uppercase text-xs">
+              <span>Explore Collections</span>
               <ArrowRight size={16} className="group-hover:translate-x-2 transition-transform" />
             </Link>
           </div>
@@ -263,6 +266,7 @@ export default function Home() {
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: idx * 0.1 }}
                 className="group relative h-[500px] overflow-hidden cursor-pointer"
+                onClick={() => window.location.href = service.path}
               >
                 <img 
                   src={service.image} 
@@ -305,8 +309,8 @@ export default function Home() {
                     </li>
                   ))}
                 </ul>
-                <Link to="/services#hair" className="text-gold border-b border-gold/30 hover:border-gold pb-1 text-xs tracking-widest uppercase transition-all inline-block">
-                  Discover Hair Rituals
+                <Link to="/eluminus" className="text-gold border-b border-gold/30 hover:border-gold pb-1 text-xs tracking-widest uppercase transition-all inline-block">
+                  Discover Eluminus
                 </Link>
               </motion.div>
             </div>
