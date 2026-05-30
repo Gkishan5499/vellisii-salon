@@ -1,21 +1,30 @@
 import { Link } from 'react-router-dom';
-import { Instagram, Facebook, Phone, Mail, MapPin } from 'lucide-react';
+import { Instagram, Facebook, Twitter, Linkedin, Phone, Mail, MapPin } from 'lucide-react';
 
 export default function Footer() {
   return (
     <footer className="bg-luxury-black border-t border-gold/20 pt-20 pb-10">
       <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
         <div className="flex flex-col space-y-6">
-          <Link to="/" className="flex flex-col">
-            <span className="text-3xl font-serif tracking-widest text-gold text-left">VELLISSII</span>
-            <span className="text-[10px] tracking-[0.3em] text-white/60 -mt-1 uppercase font-light">Salon & Spa</span>
+          <Link to="/" className="flex items-center">
+            <img src="/logo.jpeg" alt="Vellisii" className="h-12 object-contain" />
           </Link>
           <p className="text-white/50 text-sm leading-relaxed max-w-xs">
             A premium destination where beauty, science, and luxury come together. We specialize in enhancing your natural beauty with precision and care.
           </p>
           <div className="flex space-x-4">
-            <Instagram className="text-gold hover:text-white transition-colors cursor-pointer" size={20} />
-            <Facebook className="text-gold hover:text-white transition-colors cursor-pointer" size={20} />
+            <a href="https://www.instagram.com/vellisii_2026?igsh=cWVxZjN1M29lZWZy" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+              <Instagram className="text-gold hover:text-white transition-colors" size={20} />
+            </a>
+            <a href="https://www.facebook.com/share/p/1EpNy9tiZs/" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+              <Facebook className="text-gold hover:text-white transition-colors" size={20} />
+            </a>
+            <a href="https://x.com/Vellisiioffical" target="_blank" rel="noopener noreferrer" aria-label="X">
+              <Twitter className="text-gold hover:text-white transition-colors" size={20} />
+            </a>
+            <a href="https://www.linkedin.com/in/vellisii-saloon-241326406?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+              <Linkedin className="text-gold hover:text-white transition-colors" size={20} />
+            </a>
           </div>
         </div>
 

@@ -11,28 +11,12 @@ const monsoonProducts = [
     type: 'Product'
   },
   {
-    id: 'm2',
-    name: 'Hydrating Scalp Treatment',
-    description: 'Deeply nourishes the scalp to prevent seasonal dryness and dandruff.',
-    price: '₹3,200',
-    image: '/assets/images/service-skin.png',
-    type: 'Service'
-  },
-  {
     id: 'm3',
     name: 'Anti-Frizz Gloss Serum',
     description: 'Luxury serum for a smooth, glass-like finish despite the rain.',
     price: '₹2,800',
     image: '/assets/images/gallery-hair-2.png',
     type: 'Product'
-  },
-  {
-    id: 'm4',
-    name: 'Moisture Lock Facial',
-    description: '60-minute intensive hydration treatment for monsoon skin.',
-    price: '₹5,500',
-    image: '/assets/images/service-skin.png',
-    type: 'Service'
   },
   {
     id: 'm5',
@@ -43,28 +27,12 @@ const monsoonProducts = [
     type: 'Product'
   },
   {
-    id: 'm6',
-    name: 'Scalp Detox Therapy',
-    description: 'Purifying treatment to remove buildup and soothe oily scalps.',
-    price: '₹3,500',
-    image: '/assets/images/hero-science.png',
-    type: 'Service'
-  },
-  {
     id: 'm7',
     name: 'Humidity Control Spray',
     description: 'Weightless spray that creates an invisible shield against frizz.',
     price: '₹2,100',
     image: '/assets/images/service-hair.png',
     type: 'Product'
-  },
-  {
-    id: 'm8',
-    name: 'Post-Rain Glow Facial',
-    description: 'Revitalizing facial to restore radiance after exposure to environmental stress.',
-    price: '₹4,200',
-    image: '/assets/images/service-skin.png',
-    type: 'Service'
   },
   {
     id: 'm9',
@@ -115,14 +83,14 @@ export default function Mansoon() {
             </div>
             <h5 className="text-gold tracking-[0.5em] uppercase text-xs mb-4">Seasonal Special</h5>
             <h1 className="text-6xl md:text-8xl font-serif mb-6">Mansoon <span className="italic">Collection</span></h1>
-            <p className="text-white/60 max-w-2xl mx-auto text-lg font-light tracking-wide">
-              Embrace the rain with our specially curated range of products and services designed to keep you radiant all season long.
+              <p className="text-white/60 max-w-2xl mx-auto text-lg font-light tracking-wide">
+              Embrace the rain with our specially curated range of products designed to keep you radiant all season long.
             </p>
           </motion.div>
         </div>
       </div>
 
-      {/* Product/Service Grid */}
+      {/* Product Grid */}
       <div className="max-w-7xl mx-auto px-6 pb-32">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
           {monsoonProducts.map((product, index) => (

@@ -1,7 +1,24 @@
 import { motion } from 'motion/react';
 import { Sparkles, MessageCircle, Scissors, Heart, Eye, Brush, User, Gem, Info, Zap } from 'lucide-react';
 
-const allServices = [
+type ServiceItem = {
+  name: string;
+  price: string;
+  desc?: string;
+};
+
+type ServiceSection = {
+  name: string;
+  items: ServiceItem[];
+};
+
+type ServiceCategory = {
+  category: string;
+  icon: React.ReactNode;
+  sections: ServiceSection[];
+};
+
+const allServices: ServiceCategory[] = [
   {
     category: 'Hair Services',
     icon: <Scissors className="text-gold" />,
@@ -209,13 +226,13 @@ export default function Eluminus() {
     <div className="pt-32 bg-luxury-black min-h-screen">
       {/* Hero Section */}
       <div className="relative h-[50vh] overflow-hidden mb-20">
-        <img 
-          src="/assets/images/eluminus-hero.png" 
-          alt="Eluminus Master Menu" 
+        <img
+          src="/assets/images/eluminus-hero.png"
+          alt="Eluminus Master Menu"
           className="w-full h-full object-cover"
         />
-        <div className="absolute inset-0 bg-black/60"></div>
-        <div className="absolute inset-0 bg-gradient-to-t from-luxury-black via-transparent to-transparent"></div>
+        <div className="absolute inset-0 bg-black/60" />
+        <div className="absolute inset-0 bg-gradient-to-t from-luxury-black via-transparent to-transparent" />
         <div className="absolute inset-0 flex items-center justify-center text-center px-6">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -223,7 +240,9 @@ export default function Eluminus() {
             transition={{ duration: 1 }}
           >
             <h5 className="text-gold tracking-[0.4em] uppercase text-xs mb-4">Complete Atelier Menu</h5>
-            <h1 className="text-6xl md:text-8xl font-serif mb-6 italic">Master <span className="text-white not-italic">Services</span></h1>
+            <h1 className="text-6xl md:text-8xl font-serif mb-6 italic">
+              Master <span className="text-white not-italic">Services</span>
+            </h1>
             <p className="text-white/60 max-w-2xl mx-auto text-lg font-light tracking-wide">
               Explore our exhaustive range of international beauty rituals, aesthetic treatments, and luxury wellness therapies.
             </p>
@@ -233,106 +252,130 @@ export default function Eluminus() {
 
       {/* Services Grid */}
       <div className="max-w-7xl mx-auto px-6 pb-32">
-        {allServices.map((category, catIdx) => (
-          <div key={catIdx} className="mb-32">
-            <motion.div 
-              initial={{ opacity: 0, x: -20 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-              className="flex items-center space-x-6 mb-16"
-            >
-              <div className="p-5 bg-gold/5 border border-gold/20 flex items-center justify-center">
-                {category.icon}
-              </div>
-              <h2 className="text-4xl md:text-5xl font-serif">{category.category}</h2>
-            </motion.div>
-
-            <div className="space-y-20">
-              {category.sections.map((section, secIdx) => (secIdx % 2 === 0 ? (
-                <div key={secIdx} className="grid grid-cols-1 lg:grid-cols-12 gap-12">
-                   <div className="lg:col-span-4">
-                      <h3 className="text-gold tracking-[0.3em] uppercase text-xs mb-4 font-bold border-l-2 border-gold pl-4">{section.name}</h3>
-                      <p className="text-white/30 text-xs leading-relaxed uppercase tracking-tighter">Premium International <br />Techniques & Products</p>
-                   </div>
-                   <div className="lg:col-span-8 grid grid-cols-1 md:grid-cols-2 gap-8">
-                      {section.items.map((item, itemIdx) => (
-                        <div key={itemIdx} className="group border-b border-white/5 pb-6 hover:border-gold/30 transition-colors">
-                           <div className="flex justify-between items-start mb-2">
-                             <h4 className="text-lg font-serif group-hover:text-gold transition-colors">{item.name}</h4>
-                             <span className="text-gold/80 italic font-serif text-sm">{item.price}</span>
-                           </div>
-                           {item.desc && <p className="text-white/40 text-[10px] mb-4 italic">{item.desc}</p>}
-                           <button 
-                             onClick={() => handleWhatsAppEnquiry(item.name)}
-                             className="flex items-center space-x-2 text-white/40 text-[9px] tracking-widest uppercase font-bold hover:text-gold transition-colors"
-                           >
-                             <MessageCircle size={12} />
-                             <span>Enquire</span>
-                           </button>
-                        </div>
-                      ))}
-                   </div>
-                </div>
-              ) : (
-                <div key={secIdx} className="grid grid-cols-1 lg:grid-cols-12 gap-12">
-                   <div className="lg:col-span-8 grid grid-cols-1 md:grid-cols-2 gap-8 order-2 lg:order-1">
-                      {section.items.map((item, itemIdx) => (
-                        <div key={itemIdx} className="group border-b border-white/5 pb-6 hover:border-gold/30 transition-colors">
-                           <div className="flex justify-between items-start mb-2">
-                             <h4 className="text-lg font-serif group-hover:text-gold transition-colors">{item.name}</h4>
-                             <span className="text-gold/80 italic font-serif text-sm">{item.price}</span>
-                           </div>
-                           {item.desc && <p className="text-white/40 text-[10px] mb-4 italic">{item.desc}</p>}
-                           <button 
-                             onClick={() => handleWhatsAppEnquiry(item.name)}
-                             className="flex items-center space-x-2 text-white/40 text-[9px] tracking-widest uppercase font-bold hover:text-gold transition-colors"
-                           >
-                             <MessageCircle size={12} />
-                             <span>Enquire</span>
-                           </button>
-                        </div>
-                      ))}
-                   </div>
-                   <div className="lg:col-span-4 text-right order-1 lg:order-2">
-                      <h3 className="text-gold tracking-[0.3em] uppercase text-xs mb-4 font-bold border-r-2 border-gold pr-4">{section.name}</h3>
-                      <p className="text-white/30 text-xs leading-relaxed uppercase tracking-tighter">Sterile Procedures <br />Master Artistry</p>
-                   </div>
-                </div>
-              )))}
-            </div>
+        <div className="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-6 mb-16">
+          <div>
+            <p className="text-gold/70 text-[10px] tracking-[0.45em] uppercase mb-4">Eluminus Menu</p>
+            <h2 className="text-4xl md:text-5xl lg:text-6xl font-serif max-w-3xl leading-tight">
+              A curated service catalogue for every beauty ritual.
+            </h2>
           </div>
-        ))}
+          <div className="max-w-md text-white/45 text-sm leading-relaxed">
+            Explore the collection by category. Each service is presented with clear pricing, premium techniques, and a quick WhatsApp enquiry option.
+          </div>
+        </div>
+
+        <div className="space-y-12">
+          {allServices.map((category, catIdx) => (
+            <motion.article
+              key={catIdx}
+              initial={{ opacity: 0, y: 24 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, amount: 0.2 }}
+              transition={{ duration: 0.5, delay: catIdx * 0.04 }}
+              className={`relative overflow-hidden border rounded-[2rem] bg-white/[0.02] backdrop-blur-sm ${catIdx % 2 === 0 ? 'border-gold/10' : 'border-white/10'}`}
+            >
+              <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-gold/40 to-transparent" />
+              <div className="p-6 md:p-8 lg:p-10">
+                <div className="flex flex-col gap-6 lg:flex-row lg:items-start lg:justify-between mb-8">
+                  <div className="flex items-start gap-5">
+                    <div className="h-14 w-14 rounded-2xl border border-gold/20 bg-gold/5 flex items-center justify-center shrink-0">
+                      {category.icon}
+                    </div>
+                    <div>
+                      <p className="text-[10px] tracking-[0.45em] uppercase text-white/40 mb-2">Service Category</p>
+                      <h3 className="text-3xl md:text-4xl font-serif">{category.category}</h3>
+                    </div>
+                  </div>
+
+                  <div className="flex flex-wrap gap-3 text-[10px] tracking-[0.3em] uppercase text-white/50">
+                    <span className="px-4 py-2 rounded-full border border-white/10">{category.sections.length} sections</span>
+                    <span className="px-4 py-2 rounded-full border border-white/10">Premium pricing</span>
+                    <span className="px-4 py-2 rounded-full border border-white/10">WhatsApp enquiry</span>
+                  </div>
+                </div>
+
+                <div className="grid grid-cols-1 xl:grid-cols-2 gap-6">
+                  {category.sections.map((section, secIdx) => (
+                    <div key={secIdx} className="rounded-[1.5rem] border border-white/10 bg-black/20 p-6 md:p-7">
+                      <div className="flex items-start justify-between gap-4 mb-5">
+                        <div>
+                          <p className="text-gold text-[10px] tracking-[0.4em] uppercase mb-2">
+                            {String(secIdx + 1).padStart(2, '0')}
+                          </p>
+                          <h4 className="text-xl md:text-2xl font-serif">{section.name}</h4>
+                        </div>
+                        <span className="text-white/35 text-[10px] tracking-[0.35em] uppercase text-right leading-4">
+                          {section.items.length} services
+                        </span>
+                      </div>
+
+                      <div className="space-y-4">
+                        {section.items.map((item, itemIdx) => (
+                          <div
+                            key={itemIdx}
+                            className="group rounded-2xl border border-white/5 bg-white/[0.02] p-4 md:p-5 hover:border-gold/25 hover:bg-gold/[0.03] transition-all"
+                          >
+                            <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-3 mb-2">
+                              <h5 className="text-base md:text-lg font-serif group-hover:text-gold transition-colors">
+                                {item.name}
+                              </h5>
+                              <span className="text-gold/85 italic font-serif text-sm shrink-0">{item.price}</span>
+                            </div>
+
+                            {item.desc && (
+                              <p className="text-white/40 text-xs md:text-[13px] italic leading-relaxed mb-4">
+                                {item.desc}
+                              </p>
+                            )}
+
+                            <button
+                              onClick={() => handleWhatsAppEnquiry(item.name)}
+                              className="inline-flex items-center gap-2 text-white/45 text-[10px] tracking-[0.35em] uppercase font-bold hover:text-gold transition-colors"
+                            >
+                              <MessageCircle size={12} />
+                              <span>Enquire on WhatsApp</span>
+                            </button>
+                          </div>
+                        ))}
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </motion.article>
+          ))}
+        </div>
 
         {/* PMU Note Section */}
         <div className="mt-20 p-12 glass border border-gold/10">
-           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-              <div>
-                <h4 className="text-gold text-xs tracking-widest uppercase mb-6 font-bold flex items-center">
-                  <Info size={16} className="mr-2" />
-                  PMU Excellence Protocol
-                </h4>
-                <ul className="space-y-4">
-                  {['Consultation & Face Mapping', 'Premium Pigments & Hygiene Protocol', 'Touch-Up Sessions included'].map((note, i) => (
-                    <li key={i} className="flex items-center space-x-3 text-white/60 text-xs">
-                      <div className="w-1.5 h-1.5 rounded-full bg-gold/50" />
-                      <span>{note}</span>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-              <div className="text-center md:text-right">
-                 <p className="text-white/40 text-sm italic mb-6 leading-relaxed">
-                   ✨ Customised consultations for every client <br />
-                   ✨ International techniques | Premium products | Sterile procedures
-                 </p>
-                 <button 
-                  onClick={() => handleWhatsAppEnquiry("Full PMU Consultation")}
-                  className="px-8 py-4 bg-gold text-luxury-black text-[10px] tracking-[0.4em] uppercase font-bold hover:bg-white transition-all"
-                 >
-                   Book Consultation
-                 </button>
-              </div>
-           </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+            <div>
+              <h4 className="text-gold text-xs tracking-widest uppercase mb-6 font-bold flex items-center">
+                <Info size={16} className="mr-2" />
+                PMU Excellence Protocol
+              </h4>
+              <ul className="space-y-4">
+                {['Consultation & Face Mapping', 'Premium Pigments & Hygiene Protocol', 'Touch-Up Sessions included'].map((note, i) => (
+                  <li key={i} className="flex items-center space-x-3 text-white/60 text-xs">
+                    <div className="w-1.5 h-1.5 rounded-full bg-gold/50" />
+                    <span>{note}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+            <div className="text-center md:text-right">
+              <p className="text-white/40 text-sm italic mb-6 leading-relaxed">
+                ✨ Customised consultations for every client <br />
+                ✨ International techniques | Premium products | Sterile procedures
+              </p>
+              <button
+                onClick={() => handleWhatsAppEnquiry('Full PMU Consultation')}
+                className="px-8 py-4 bg-gold text-luxury-black text-[10px] tracking-[0.4em] uppercase font-bold hover:bg-white transition-all"
+              >
+                Book Consultation
+              </button>
+            </div>
+          </div>
         </div>
       </div>
     </div>

@@ -10,6 +10,7 @@ import Contact from './pages/Contact';
 import BookAppointment from './pages/BookAppointment';
 import Mansoon from './pages/Mansoon';
 import Eluminus from './pages/Eluminus';
+import VillisiiAcademy from './pages/Villisiiacademy';
 
 function ScrollToTop() {
   const { pathname } = useLocation();
@@ -35,6 +36,7 @@ export default function App() {
             <Route path="/book" element={<BookAppointment />} />
             <Route path="/mansoon" element={<Mansoon />} />
             <Route path="/eluminus" element={<Eluminus />} />
+            <Route path="/academy" element={<VillisiiAcademy />} />
             <Route path="*" element={<Home />} />
           </Routes>
         </main>

@@ -1,7 +1,13 @@
+declare namespace JSX {
+  interface IntrinsicElements {
+    [elemName: string]: any;
+  }
+}
+
 import { motion, AnimatePresence } from 'motion/react';
 import { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { Menu, X, Instagram, Facebook, Phone } from 'lucide-react';
+import { Menu, X, Instagram, Facebook, Phone, Twitter, Linkedin } from 'lucide-react';
 
 const navLinks = [
   { name: 'Home', path: '/' },
@@ -9,6 +15,7 @@ const navLinks = [
   { name: 'Bridal', path: '/bridal' },
   { name: 'Mansoon', path: '/mansoon' },
   { name: 'Eluminus', path: '/eluminus' },
+  { name: 'Academy', path: '/academy' },
   { name: 'Gallery', path: '/gallery' },
   { name: 'Contact', path: '/contact' },
 ];
@@ -26,14 +33,13 @@ export default function Navbar() {
 
   return (
     <nav 
-      className={`fixed w-full z-50 transition-all duration-700 ${
-        scrolled ? 'bg-luxury-black/95 backdrop-blur-xl py-4 border-b border-gold/10' : 'bg-transparent py-10'
+      className={`fixed w-full z-50 py-4 transition-all duration-700 ${
+        scrolled ? 'bg-luxury-black/95 backdrop-blur-xl border-b border-gold/10' : 'bg-transparent border-b border-transparent'
       }`}
     >
       <div className="max-w-7xl mx-auto px-6 flex justify-between items-center">
-        <Link to="/" className="flex flex-col items-center group">
-          <span className={`font-serif tracking-[0.3em] transition-all duration-500 ${scrolled ? 'text-2xl text-gold' : 'text-3xl text-gold'}`}>VELLISSII</span>
-          <span className="text-[10px] tracking-[0.4em] text-white/40 -mt-1 group-hover:text-white transition-colors uppercase font-light">Salon & Spa</span>
+        <Link to="/" className="flex items-center group">
+          <img src="/logo.jpeg" alt="Vellisii" className={`h-10 lg:h-14 object-contain ${scrolled ? 'filter brightness-90' : ''}`} />
         </Link>
 
         {/* Desktop Nav */}
@@ -93,10 +99,22 @@ export default function Navbar() {
               >
                 Book Appointment
               </Link>
-              <div className="flex justify-center space-x-8 pt-4">
-                <Instagram className="text-white/60 hover:text-gold cursor-pointer" size={20} />
-                <Facebook className="text-white/60 hover:text-gold cursor-pointer" size={20} />
-                <Phone className="text-white/60 hover:text-gold cursor-pointer" size={20} />
+              <div className="flex justify-center space-x-6 pt-4">
+                <a href="https://www.instagram.com/vellisii_2026?igsh=cWVxZjN1M29lZWZy" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+                  <Instagram className="text-white/60 hover:text-gold" size={20} />
+                </a>
+                <a href="https://www.facebook.com/share/p/1EpNy9tiZs/" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+                  <Facebook className="text-white/60 hover:text-gold" size={20} />
+                </a>
+                <a href="https://x.com/Vellisiioffical" target="_blank" rel="noopener noreferrer" aria-label="X">
+                  <Twitter className="text-white/60 hover:text-gold" size={20} />
+                </a>
+                <a href="https://www.linkedin.com/in/vellisii-saloon-241326406?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+                  <Linkedin className="text-white/60 hover:text-gold" size={20} />
+                </a>
+                <a href="tel:+919876543210" aria-label="Phone">
+                  <Phone className="text-white/60 hover:text-gold" size={20} />
+                </a>
               </div>
             </div>
           </motion.div>
