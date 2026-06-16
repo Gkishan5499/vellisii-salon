@@ -73,7 +73,7 @@ export default function Footer() {
         </div>
       </div>
       <div className="max-w-7xl mx-auto px-6 mt-20 pt-8 border-t border-white/5 text-center text-white/30 text-[10px] tracking-[0.2em] uppercase">
-        © 2026 Vellisii Salon. All rights reserved. | Designed and Developed by <Link to="https://samnictech.com/" target='_blank'>Samnic Tech</Link> .
+        © 2026 Vellisii Salon. All rights reserved. | Designed and Developed by <Link to="https://samnictech.in/" target='_blank'>Samnic Tech</Link> .
       </div>
     </footer>
   )
