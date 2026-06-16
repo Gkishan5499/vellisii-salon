@@ -5,48 +5,48 @@ import { useRef, useState, useEffect } from 'react';
 
 const slides = [
   {
-    tagline: 'The Apex of Beauty',
-    title: 'Step Into',
-    subtitle: 'Luxury.',
-    extra: 'Transformation',
-    desc: 'At Vellisii, we blend international expertise with bespoke luxury to craft your perfect aesthetic journey.',
+    tagline: 'Where Detail is Everything',
+    title: 'Your hair,',
+    subtitle: 'elevated.',
+    extra: 'Restorative',
+    desc: "We believe great hair isn't about fitting a mold. It's about precision cuts, rich colors, and treatments tailored to the way your hair actually behaves.",
     image: '/assets/images/hero-heritage.png'
   },
   {
-    tagline: 'Artistry Defined',
-    title: 'Masterful',
-    subtitle: 'Scalp Rituals.',
-    extra: 'Artistry',
-    desc: 'Experience the precision of world-class stylists in an environment designed for total indulgence and creative expression.',
+    tagline: 'Masterful Cuts & Styling',
+    title: 'Healthy hair,',
+    subtitle: 'at the root.',
+    extra: 'Rituals',
+    desc: 'Indulge in restorative scalp therapies and custom cuts designed by stylists who listen first and style second.',
     image: '/assets/images/hero-artistry.png'
   },
   {
-    tagline: 'Scientific Radiance',
-    title: 'Advanced',
-    subtitle: 'Aesthetics.',
-    extra: 'Radiance',
-    desc: 'Discover the future of skincare with our medical-grade therapies and holistic wellness rituals tailored for your unique skin.',
+    tagline: 'Targeted Skincare',
+    title: 'Glow from',
+    subtitle: 'within.',
+    extra: 'Therapies',
+    desc: 'From deep hydration to medical-grade therapies, we focus on real skin health that delivers visible, lasting radiance.',
     image: '/assets/images/hero-science.png'
   }
 ];
 
 const services = [
   {
-    title: 'Eluminus Range',
-    image: '/assets/images/eluminus-hero.png',
-    desc: 'Advanced hair molecular technology for extraordinary shine.',
-    path: '/eluminus'
-  },
-  {
     title: 'Mansoon Special',
     image: '/assets/images/mansoon-hero.png',
-    desc: 'Seasonal hair and skin rescue rituals for humid weather.',
+    desc: 'Humid weather can be tough on hair and skin. Our seasonal treatments are designed to fight frizz, restore moisture, and keep you glowing.',
     path: '/mansoon'
+  },
+  {
+    title: 'ILLUMIS Aesthetics',
+    image: '/assets/images/hero-science.png',
+    desc: 'Targeted skin therapies and non-invasive treatments designed to address your specific concerns and restore youthful vitality.',
+    path: '/illumis'
   },
   {
     title: 'Bridal Artistry',
     image: '/assets/images/bridal-hero.png',
-    desc: 'Bespoke bridal transformations for your special day.',
+    desc: 'From trials to the big day, we work closely with you to design a classic, timeless look that makes you feel completely beautiful.',
     path: '/bridal'
   }
 ];
@@ -137,11 +137,11 @@ export default function Home() {
                       </span>
                     </Link>
                     
-                    <Link to="/eluminus" className="group flex items-center space-x-4 text-white text-xs tracking-[0.3em] uppercase font-medium hover:text-gold transition-colors">
+                    <Link to="/mansoon" className="group flex items-center space-x-4 text-white text-xs tracking-[0.3em] uppercase font-medium hover:text-gold transition-colors">
                       <div className="w-12 h-12 rounded-full border border-white/20 flex items-center justify-center group-hover:border-gold transition-colors">
                         <Play size={14} className="fill-current ml-1" />
                       </div>
-                      <span>Explore Eluminus</span>
+                      <span>Explore Mansoon</span>
                     </Link>
                   </div>
                 </motion.div>
@@ -204,14 +204,14 @@ export default function Home() {
               transition={{ duration: 0.8 }}
             >
               <h2 className="text-4xl md:text-5xl font-serif mb-8 leading-tight">
-                Why <span className="text-gold italic">Vellisii</span> is the Preferred Luxury Choice
+                The <span className="text-gold italic">Vellisii</span> Standard
               </h2>
               <div className="space-y-8">
                 {[
-                  { title: "Premium International Products", desc: "We use only the world's finest organic and scientific beauty care." },
-                  { title: "Certified & Experienced Stylists", desc: "Our team consists of industry veterans trained globally." },
-                  { title: "Hygienic Luxury Environment", desc: "Medical-grade sanitation meeting a 5-star spa experience." },
-                  { title: "Advanced Skin Technologies", desc: "State-of-the-art HydraFacial and Laser therapies." }
+                  { title: "Handpicked Premium Products", desc: "We only use premium, clean products that we trust on our own hair and skin—never compromising on quality." },
+                  { title: "Stylists Who Listen", desc: "Our team doesn't just copy trends. We study your hair texture, facial features, and daily routine to create looks that work in real life." },
+                  { title: "Immaculate Sanctuary", desc: "A peaceful, hygienic space where you can escape the noise, relax, and let us take care of everything." },
+                  { title: "Advanced Skin Science", desc: "From targeted facials to advanced aesthetic treatments, we combine clinical-grade technology with relaxing wellness rituals." }
                 ].map((item, idx) => (
                   <div key={idx} className="flex items-start space-x-4">
                     <div className="mt-1 w-6 h-6 rounded-full border border-gold flex items-center justify-center flex-shrink-0">
@@ -235,8 +235,8 @@ export default function Home() {
                 />
               </div>
               <div className="absolute -bottom-10 -left-10 glass p-8 hidden md:block max-w-xs">
-                <p className="text-gold italic font-serif text-xl mb-2">"True beauty is a reflection of your well-being."</p>
-                <p className="text-white/40 text-[10px] tracking-widest uppercase">Vellisii Philosophy</p>
+                <p className="text-gold italic font-serif text-xl mb-2">"Beauty isn't about conforming to a trend. It's about feeling completely confident and comfortable in your own skin."</p>
+                <p className="text-white/40 text-[10px] tracking-widest uppercase">Our Philosophy</p>
               </div>
             </div>
           </div>
@@ -251,8 +251,8 @@ export default function Home() {
               <h5 className="text-gold tracking-[0.4em] uppercase text-sm mb-4">Our Craft</h5>
               <h2 className="text-4xl md:text-6xl font-serif">Signature <span className="italic">Experiences</span></h2>
             </div>
-            <Link to="/eluminus" className="group flex items-center space-x-3 text-gold tracking-[0.2em] uppercase text-xs">
-              <span>Explore Collections</span>
+            <Link to="/mansoon" className="group flex items-center space-x-3 text-gold tracking-[0.2em] uppercase text-xs">
+              <span>View Services</span>
               <ArrowRight size={16} className="group-hover:translate-x-2 transition-transform" />
             </Link>
           </div>
@@ -296,21 +296,21 @@ export default function Home() {
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
               >
-                <h5 className="text-gold tracking-[0.4em] uppercase text-xs mb-4">Elegance in Motion</h5>
+                <h5 className="text-gold tracking-[0.4em] uppercase text-xs mb-4">Crafted with Care</h5>
                 <h2 className="text-4xl md:text-6xl font-serif mb-8 leading-tight">The <span className="italic">Hair</span> Atelier</h2>
                 <p className="text-white/50 text-lg leading-relaxed mb-10 font-light">
-                  From precision creative cuts to advanced hair botox and global color rituals, we redefine the standard of hair artistry.
+                  Whether you need a complete style refresh, a rich hand-painted balayage, or a deeply conditioning hair botox treatment, our stylists focus on the details that make your hair look effortless.
                 </p>
                 <ul className="space-y-6 mb-12">
-                  {['Designer Haircuts', 'Balayage & Ombre', 'Keratin Smoothing', 'Scalp Detox Therapy'].map((item, i) => (
+                  {['Precision Cuts & Styling', 'Hand-Painted Color', 'Frizz-Free Treatments', 'Scalp Health & Rejuvenation'].map((item, i) => (
                     <li key={i} className="flex items-center space-x-3 text-white/80 tracking-widest text-xs uppercase border-b border-white/5 pb-4">
                       <span className="text-gold">0{i+1}.</span>
                       <span>{item}</span>
                     </li>
                   ))}
                 </ul>
-                <Link to="/eluminus" className="text-gold border-b border-gold/30 hover:border-gold pb-1 text-xs tracking-widest uppercase transition-all inline-block">
-                  Discover Eluminus
+                <Link to="/mansoon" className="text-gold border-b border-gold/30 hover:border-gold pb-1 text-xs tracking-widest uppercase transition-all inline-block">
+                  Discover Mansoon
                 </Link>
               </motion.div>
             </div>
@@ -360,7 +360,7 @@ export default function Home() {
                 <img src="/assets/images/hero-science.png" className="w-full h-full object-cover grayscale brightness-50 group-hover:scale-110 transition-transform duration-[2s]" alt="Skin" />
                 <div className="absolute inset-0 p-10 flex flex-col justify-end bg-gradient-to-t from-luxury-black via-transparent to-transparent">
                   <h3 className="text-3xl font-serif mb-2">HydraFacial Elite</h3>
-                  <p className="text-gold tracking-widest text-[10px] uppercase">Scientific Excellence</p>
+                  <p className="text-gold tracking-widest text-[10px] uppercase">Deep cleansing & instant hydration</p>
                 </div>
              </motion.div>
 
@@ -370,7 +370,7 @@ export default function Home() {
              >
                 <img src="/assets/images/massage-wellness.png" className="w-full h-full object-cover grayscale brightness-50 group-hover:scale-110 transition-transform duration-[2s]" alt="Massage" />
                 <div className="absolute inset-x-0 bottom-0 p-8 flex justify-between items-end bg-gradient-to-t from-luxury-black to-transparent">
-                   <h3 className="text-2xl font-serif">Body Wellness</h3>
+                   <h3 className="text-2xl font-serif">Massage & Wellness</h3>
                    <ArrowRight className="text-gold group-hover:translate-x-2 transition-transform" />
                 </div>
              </motion.div>
@@ -382,7 +382,7 @@ export default function Home() {
                 <img src="/assets/images/service-nails.png" className="w-full h-full object-cover grayscale brightness-50 group-hover:scale-110 transition-transform duration-[2s]" alt="Nails" />
                 <div className="absolute inset-0 p-6 flex flex-col justify-center text-center backdrop-blur-sm opacity-0 group-hover:opacity-100 transition-opacity">
                    <h3 className="text-xl font-serif">Nail Artistry</h3>
-                   <p className="text-gold text-[8px] tracking-widest uppercase mt-2">Bespoke Designs</p>
+                   <p className="text-gold text-[8px] tracking-widest uppercase mt-2">Clean, elegant nail care</p>
                 </div>
              </motion.div>
 
@@ -390,9 +390,9 @@ export default function Home() {
                whileHover={{ scale: 0.98 }}
                className="md:col-span-1 md:row-span-1 relative overflow-hidden group cursor-pointer bg-gold p-8 flex flex-col justify-center text-luxury-black"
              >
-                <h3 className="text-xl font-serif mb-4 italic">The <br />Difference</h3>
-                <p className="text-xs leading-relaxed uppercase tracking-tighter opacity-70">Medical Grade <br />Consultation <br />Before Every <br />Session.</p>
-                <Link to="/book" className="mt-6 text-[10px] tracking-widest font-bold uppercase border-b border-luxury-black inline-block">Book Skin Analysis</Link>
+                <h3 className="text-xl font-serif mb-4 italic">Our <br />Approach</h3>
+                <p className="text-xs leading-relaxed uppercase tracking-tighter opacity-70">We start every <br />skin service <br />with an honest <br />consultation.</p>
+                <Link to="/book" className="mt-6 text-[10px] tracking-widest font-bold uppercase border-b border-luxury-black inline-block">Book a Skin Consultation</Link>
              </motion.div>
           </div>
         </div>
@@ -409,14 +409,14 @@ export default function Home() {
             whileInView={{ opacity: 1 }}
             className="text-2xl md:text-4xl font-serif italic mb-12 leading-relaxed"
           >
-            "Vellisii isn't just a salon, it's a sanctuary. The attention to detail in their hair rituals and the sheer luxury of the space transformed how I feel about my self-care."
+            "I've never had a stylist take the time to explain my hair's natural behavior and growth patterns before. The team doesn't just style your hair—they teach you how to look after it."
           </motion.p>
           <div className="flex flex-col items-center">
             <div className="w-16 h-16 rounded-full overflow-hidden border-2 border-gold mb-4">
               <img src="/assets/images/client-testimonial.png" alt="Client" />
             </div>
-            <h5 className="text-white tracking-widest text-sm uppercase">Eleanor Sterling</h5>
-            <p className="text-gold text-[10px] tracking-[0.3em] uppercase mt-1">Loyal Guest</p>
+            <h5 className="text-white tracking-widest text-sm uppercase">Sarah Jenkins</h5>
+            <p className="text-gold text-[10px] tracking-[0.3em] uppercase mt-1">Regular Guest</p>
           </div>
         </div>
       </section>
@@ -426,14 +426,14 @@ export default function Home() {
         <div className="absolute inset-0 bg-gold z-0 transform -skew-y-3 translate-y-20"></div>
         <div className="relative z-10 max-w-7xl mx-auto px-6 text-center text-luxury-black">
           <h2 className="text-4xl md:text-7xl font-serif mb-10 leading-tight">
-            Ready for Your <br />
-            <span className="italic">Luxury Experience?</span>
+            Ready for a <br />
+            <span className="italic">Fresh Start?</span>
           </h2>
           <Link 
             to="/book" 
             className="inline-block px-12 py-6 bg-luxury-black text-gold text-sm tracking-[0.4em] uppercase font-bold hover:bg-white transition-colors"
           >
-            Confirm Your Booking
+            Book Your Appointment
           </Link>
         </div>
       </section>

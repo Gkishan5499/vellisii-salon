@@ -8,9 +8,11 @@ import Bridal from './pages/Bridal';
 import Gallery from './pages/Gallery';
 import Contact from './pages/Contact';
 import BookAppointment from './pages/BookAppointment';
+import Illumis from './pages/Illumis';
 import Mansoon from './pages/Mansoon';
-import Eluminus from './pages/Eluminus';
 import VillisiiAcademy from './pages/Villisiiacademy';
+import Terms from './pages/Terms';
+import WhatsappWidget from './components/WhatsappWidget';
 
 function ScrollToTop() {
   const { pathname } = useLocation();
@@ -34,13 +36,15 @@ export default function App() {
             <Route path="/gallery" element={<Gallery />} />
             <Route path="/contact" element={<Contact />} />
             <Route path="/book" element={<BookAppointment />} />
-            <Route path="/mansoon" element={<Mansoon />} />
-            <Route path="/eluminus" element={<Eluminus />} />
+            <Route path="/illumis" element={<Illumis />} />
+            <Route path="/monsoon" element={<Mansoon />} />
             <Route path="/academy" element={<VillisiiAcademy />} />
+            <Route path="/terms" element={<Terms />} />
             <Route path="*" element={<Home />} />
           </Routes>
         </main>
         <Footer />
+        <WhatsappWidget />
       </div>
     </Router>
   );

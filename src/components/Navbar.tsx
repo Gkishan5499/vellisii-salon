@@ -13,8 +13,8 @@ const navLinks = [
   { name: 'Home', path: '/' },
   { name: 'About', path: '/about' },
   { name: 'Bridal', path: '/bridal' },
-  { name: 'Mansoon', path: '/mansoon' },
-  { name: 'Eluminus', path: '/eluminus' },
+  { name: 'ILLUMIS', path: '/illumis' },
+  { name: 'Monsoon', path: '/monsoon' },
   { name: 'Academy', path: '/academy' },
   { name: 'Gallery', path: '/gallery' },
   { name: 'Contact', path: '/contact' },
@@ -32,14 +32,13 @@ export default function Navbar() {
   }, []);
 
   return (
-    <nav 
-      className={`fixed w-full z-50 py-4 transition-all duration-700 ${
-        scrolled ? 'bg-luxury-black/95 backdrop-blur-xl border-b border-gold/10' : 'bg-transparent border-b border-transparent'
-      }`}
+    <nav
+      className={`fixed w-full z-50 py-4 transition-all duration-700 ${scrolled ? 'bg-luxury-black/95 backdrop-blur-xl border-b border-gold/10' : 'bg-transparent border-b border-transparent'
+        }`}
     >
       <div className="max-w-7xl mx-auto px-6 flex justify-between items-center">
         <Link to="/" className="flex items-center group">
-          <img src="/logo.jpeg" alt="Vellisii" className={`h-10 lg:h-14 object-contain ${scrolled ? 'filter brightness-90' : ''}`} />
+          <img src="/logo.jpeg" alt="Vellisii" className={`h-10 lg:h-14 rounded-xl object-contain border border-gold/20 ${scrolled ? 'filter brightness-90' : ''}`} />
         </Link>
 
         {/* Desktop Nav */}
@@ -48,15 +47,14 @@ export default function Navbar() {
             <Link
               key={link.name}
               to={link.path}
-              className={`text-sm tracking-widest uppercase transition-colors hover:text-gold ${
-                location.pathname === link.path ? 'text-gold font-medium' : 'text-white/80'
-              }`}
+              className={`text-sm tracking-widest uppercase transition-colors hover:text-gold ${location.pathname === link.path ? 'text-gold font-medium' : 'text-white/80'
+                }`}
             >
               {link.name}
             </Link>
           ))}
-          <Link 
-            to="/book" 
+          <Link
+            to="/book"
             className="px-6 py-2 border border-gold text-gold hover:bg-gold hover:text-luxury-black transition-all duration-300 text-xs tracking-[0.2em] uppercase"
           >
             Book Now
@@ -64,7 +62,7 @@ export default function Navbar() {
         </div>
 
         {/* Mobile Toggle */}
-        <button 
+        <button
           className="lg:hidden text-gold"
           onClick={() => setIsOpen(!isOpen)}
         >
@@ -92,7 +90,7 @@ export default function Navbar() {
                   {link.name}
                 </Link>
               ))}
-              <Link 
+              <Link
                 to="/book"
                 onClick={() => setIsOpen(false)}
                 className="w-full text-center py-4 bg-gold text-luxury-black text-sm tracking-[0.2em] uppercase font-bold"
@@ -112,7 +110,7 @@ export default function Navbar() {
                 <a href="https://www.linkedin.com/in/vellisii-saloon-241326406?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
                   <Linkedin className="text-white/60 hover:text-gold" size={20} />
                 </a>
-                <a href="tel:+919876543210" aria-label="Phone">
+                <a href="tel:+919862224291" aria-label="Phone">
                   <Phone className="text-white/60 hover:text-gold" size={20} />
                 </a>
               </div>
