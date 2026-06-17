@@ -1,6 +1,6 @@
 import { motion, useScroll, useTransform, AnimatePresence } from 'motion/react';
 import { ArrowRight, Star, CheckCircle2, ChevronRight, Play } from 'lucide-react';
-import { Link, useNavigate } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import { useRef, useState, useEffect } from 'react';
 
 const slides = [
@@ -52,12 +52,11 @@ const services = [
 ];
 
 export default function Home() {
-  const navigate = useNavigate();
   const containerRef = useRef(null);
   const { scrollY } = useScroll();
   const y1 = useTransform(scrollY, [0, 500], [0, -150]);
   const opacity = useTransform(scrollY, [0, 500], [1, 0]);
-  
+
   const [currentSlide, setCurrentSlide] = useState(0);
 
   useEffect(() => {
@@ -72,7 +71,7 @@ export default function Home() {
       {/* Hero Section */}
       <section className="relative h-screen flex items-center overflow-hidden">
         <AnimatePresence mode="wait">
-          <motion.div 
+          <motion.div
             key={currentSlide}
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
@@ -81,8 +80,8 @@ export default function Home() {
             style={{ y: y1 }}
             className="absolute inset-0 z-0 scale-110"
           >
-            <img 
-              src={slides[currentSlide].image} 
+            <img
+              src={slides[currentSlide].image}
               alt="Vellisii Salon Hero"
               className="w-full h-full object-cover brightness-[0.35]"
             />
@@ -106,7 +105,7 @@ export default function Home() {
                   transition={{ duration: 1, ease: [0.22, 1, 0.36, 1] }}
                 >
                   <div className="flex items-center space-x-4 mb-10 overflow-hidden">
-                    <motion.div 
+                    <motion.div
                       initial={{ width: 0 }}
                       animate={{ width: 40 }}
                       className="h-[1px] bg-gold"
@@ -121,14 +120,14 @@ export default function Home() {
                     <span className="font-light">{slides[currentSlide].extra}</span>
                     <span className="text-gold">.</span>
                   </h1>
-                  
+
                   <p className="text-white/60 text-lg md:text-xl mb-12 max-w-xl leading-relaxed font-light">
                     {slides[currentSlide].desc}
                   </p>
 
                   <div className="flex flex-col sm:flex-row items-start sm:items-center space-y-6 sm:space-y-0 sm:space-x-8">
                     <Link to="/book" className="group relative px-12 py-6 bg-gold overflow-hidden">
-                      <motion.div 
+                      <motion.div
                         initial={false}
                         whileHover={{ x: '100%' }}
                         className="absolute inset-0 bg-white/20 -translate-x-full"
@@ -137,12 +136,12 @@ export default function Home() {
                         Reserve Experience <ChevronRight className="ml-2 group-hover:translate-x-1 transition-transform" size={16} />
                       </span>
                     </Link>
-                    
-                    <Link to="/monsoon" className="group flex items-center space-x-4 text-white text-xs tracking-[0.3em] uppercase font-medium hover:text-gold transition-colors">
+
+                    <Link to="/mansoon" className="group flex items-center space-x-4 text-white text-xs tracking-[0.3em] uppercase font-medium hover:text-gold transition-colors">
                       <div className="w-12 h-12 rounded-full border border-white/20 flex items-center justify-center group-hover:border-gold transition-colors">
                         <Play size={14} className="fill-current ml-1" />
                       </div>
-                      <span>Explore Monsoon</span>
+                      <span>Explore Mansoon</span>
                     </Link>
                   </div>
                 </motion.div>
@@ -150,7 +149,7 @@ export default function Home() {
             </motion.div>
 
             <div className="hidden lg:flex lg:col-span-4 flex-col items-end justify-center space-y-20">
-              <motion.div 
+              <motion.div
                 initial={{ opacity: 0, scale: 0.8 }}
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 1, delay: 0.5 }}
@@ -186,11 +185,11 @@ export default function Home() {
         </div>
 
         <div className="absolute bottom-10 left-10 hidden md:block">
-           <div className="flex items-center space-x-4 text-white/20 text-[10px] tracking-[0.5em] uppercase font-light">
-              <span className="text-gold font-medium">0{currentSlide + 1}</span>
-              <div className="w-10 h-[1px] bg-white/10" />
-              <span>0{slides.length}</span>
-           </div>
+          <div className="flex items-center space-x-4 text-white/20 text-[10px] tracking-[0.5em] uppercase font-light">
+            <span className="text-gold font-medium">0{currentSlide + 1}</span>
+            <div className="w-10 h-[1px] bg-white/10" />
+            <span>0{slides.length}</span>
+          </div>
         </div>
       </section>
 
@@ -229,8 +228,8 @@ export default function Home() {
 
             <div className="relative">
               <div className="aspect-[4/5] bg-luxury-black border border-gold/20 p-4">
-                <img 
-                  src="/assets/images/stylist-working.png" 
+                <img
+                  src="/assets/images/stylist-working.png"
                   alt="Stylist working"
                   className="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700"
                 />
@@ -252,7 +251,7 @@ export default function Home() {
               <h5 className="text-gold tracking-[0.4em] uppercase text-sm mb-4">Our Craft</h5>
               <h2 className="text-4xl md:text-6xl font-serif">Signature <span className="italic">Experiences</span></h2>
             </div>
-            <Link to="/monsoon" className="group flex items-center space-x-3 text-gold tracking-[0.2em] uppercase text-xs">
+            <Link to="/mansoon" className="group flex items-center space-x-3 text-gold tracking-[0.2em] uppercase text-xs">
               <span>View Services</span>
               <ArrowRight size={16} className="group-hover:translate-x-2 transition-transform" />
             </Link>
@@ -267,10 +266,10 @@ export default function Home() {
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: idx * 0.1 }}
                 className="group relative h-[500px] overflow-hidden cursor-pointer"
-                onClick={() => navigate(service.path)}
+                onClick={() => window.location.href = service.path}
               >
-                <img 
-                  src={service.image} 
+                <img
+                  src={service.image}
                   alt={service.title}
                   className="w-full h-full object-cover transition-transform duration-[1.5s] group-hover:scale-110 brightness-75 group-hover:brightness-50"
                 />
@@ -305,38 +304,38 @@ export default function Home() {
                 <ul className="space-y-6 mb-12">
                   {['Precision Cuts & Styling', 'Hand-Painted Color', 'Frizz-Free Treatments', 'Scalp Health & Rejuvenation'].map((item, i) => (
                     <li key={i} className="flex items-center space-x-3 text-white/80 tracking-widest text-xs uppercase border-b border-white/5 pb-4">
-                      <span className="text-gold">0{i+1}.</span>
+                      <span className="text-gold">0{i + 1}.</span>
                       <span>{item}</span>
                     </li>
                   ))}
                 </ul>
-                <Link to="/monsoon" className="text-gold border-b border-gold/30 hover:border-gold pb-1 text-xs tracking-widest uppercase transition-all inline-block">
-                  Discover Monsoon
+                <Link to="/mansoon" className="text-gold border-b border-gold/30 hover:border-gold pb-1 text-xs tracking-widest uppercase transition-all inline-block">
+                  Discover Mansoon
                 </Link>
               </motion.div>
             </div>
             <div className="lg:col-span-7 grid grid-cols-2 gap-6 h-[600px]">
-              <motion.div 
+              <motion.div
                 initial={{ opacity: 0, y: 40 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 className="h-full pt-12"
               >
-                <img 
-                  src="/assets/images/service-hair.png" 
-                  alt="Hair Color" 
+                <img
+                  src="/assets/images/service-hair.png"
+                  alt="Hair Color"
                   className="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700 rounded-none"
                 />
               </motion.div>
-              <motion.div 
+              <motion.div
                 initial={{ opacity: 0, y: -40 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 className="h-full pb-12"
               >
-                <img 
-                  src="/assets/images/hero-artistry.png" 
-                  alt="Hair Styling" 
+                <img
+                  src="/assets/images/hero-artistry.png"
+                  alt="Hair Styling"
                   className="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700 rounded-none border border-gold/20 p-2"
                 />
               </motion.div>
@@ -352,49 +351,49 @@ export default function Home() {
             <h5 className="text-gold tracking-[0.4em] uppercase text-xs mb-4">Scientific Beauty</h5>
             <h2 className="text-4xl md:text-6xl font-serif">Advanced <span className="italic">Aesthetic</span> Care</h2>
           </div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-4 grid-rows-2 gap-4 h-[auto] md:h-[700px]">
-             <motion.div 
-               whileHover={{ scale: 0.98 }}
-               className="md:col-span-2 md:row-span-2 relative overflow-hidden group cursor-pointer"
-             >
-                <img src="/assets/images/hero-science.png" className="w-full h-full object-cover grayscale brightness-50 group-hover:scale-110 transition-transform duration-[2s]" alt="Skin" />
-                <div className="absolute inset-0 p-10 flex flex-col justify-end bg-gradient-to-t from-luxury-black via-transparent to-transparent">
-                  <h3 className="text-3xl font-serif mb-2">HydraFacial Elite</h3>
-                  <p className="text-gold tracking-widest text-[10px] uppercase">Deep cleansing & instant hydration</p>
-                </div>
-             </motion.div>
+            <motion.div
+              whileHover={{ scale: 0.98 }}
+              className="md:col-span-2 md:row-span-2 relative overflow-hidden group cursor-pointer"
+            >
+              <img src="/assets/images/hero-science.png" className="w-full h-full object-cover grayscale brightness-50 group-hover:scale-110 transition-transform duration-[2s]" alt="Skin" />
+              <div className="absolute inset-0 p-10 flex flex-col justify-end bg-gradient-to-t from-luxury-black via-transparent to-transparent">
+                <h3 className="text-3xl font-serif mb-2">HydraFacial Elite</h3>
+                <p className="text-gold tracking-widest text-[10px] uppercase">Deep cleansing & instant hydration</p>
+              </div>
+            </motion.div>
 
-             <motion.div 
-               whileHover={{ scale: 0.98 }}
-               className="md:col-span-2 md:row-span-1 relative overflow-hidden group cursor-pointer"
-             >
-                <img src="/assets/images/massage-wellness.png" className="w-full h-full object-cover grayscale brightness-50 group-hover:scale-110 transition-transform duration-[2s]" alt="Massage" />
-                <div className="absolute inset-x-0 bottom-0 p-8 flex justify-between items-end bg-gradient-to-t from-luxury-black to-transparent">
-                   <h3 className="text-2xl font-serif">Massage & Wellness</h3>
-                   <ArrowRight className="text-gold group-hover:translate-x-2 transition-transform" />
-                </div>
-             </motion.div>
+            <motion.div
+              whileHover={{ scale: 0.98 }}
+              className="md:col-span-2 md:row-span-1 relative overflow-hidden group cursor-pointer"
+            >
+              <img src="/assets/images/massage-wellness.png" className="w-full h-full object-cover grayscale brightness-50 group-hover:scale-110 transition-transform duration-[2s]" alt="Massage" />
+              <div className="absolute inset-x-0 bottom-0 p-8 flex justify-between items-end bg-gradient-to-t from-luxury-black to-transparent">
+                <h3 className="text-2xl font-serif">Massage & Wellness</h3>
+                <ArrowRight className="text-gold group-hover:translate-x-2 transition-transform" />
+              </div>
+            </motion.div>
 
-             <motion.div 
-               whileHover={{ scale: 0.98 }}
-               className="md:col-span-1 md:row-span-1 relative overflow-hidden group cursor-pointer"
-             >
-                <img src="/assets/images/service-nails.png" className="w-full h-full object-cover grayscale brightness-50 group-hover:scale-110 transition-transform duration-[2s]" alt="Nails" />
-                <div className="absolute inset-0 p-6 flex flex-col justify-center text-center backdrop-blur-sm opacity-0 group-hover:opacity-100 transition-opacity">
-                   <h3 className="text-xl font-serif">Nail Artistry</h3>
-                   <p className="text-gold text-[8px] tracking-widest uppercase mt-2">Clean, elegant nail care</p>
-                </div>
-             </motion.div>
+            <motion.div
+              whileHover={{ scale: 0.98 }}
+              className="md:col-span-1 md:row-span-1 relative overflow-hidden group cursor-pointer"
+            >
+              <img src="/assets/images/service-nails.png" className="w-full h-full object-cover grayscale brightness-50 group-hover:scale-110 transition-transform duration-[2s]" alt="Nails" />
+              <div className="absolute inset-0 p-6 flex flex-col justify-center text-center backdrop-blur-sm opacity-0 group-hover:opacity-100 transition-opacity">
+                <h3 className="text-xl font-serif">Nail Artistry</h3>
+                <p className="text-gold text-[8px] tracking-widest uppercase mt-2">Clean, elegant nail care</p>
+              </div>
+            </motion.div>
 
-             <motion.div 
-               whileHover={{ scale: 0.98 }}
-               className="md:col-span-1 md:row-span-1 relative overflow-hidden group cursor-pointer bg-gold p-8 flex flex-col justify-center text-luxury-black"
-             >
-                <h3 className="text-xl font-serif mb-4 italic">Our <br />Approach</h3>
-                <p className="text-xs leading-relaxed uppercase tracking-tighter opacity-70">We start every <br />skin service <br />with an honest <br />consultation.</p>
-                <Link to="/book" className="mt-6 text-[10px] tracking-widest font-bold uppercase border-b border-luxury-black inline-block">Book a Skin Consultation</Link>
-             </motion.div>
+            <motion.div
+              whileHover={{ scale: 0.98 }}
+              className="md:col-span-1 md:row-span-1 relative overflow-hidden group cursor-pointer bg-gold p-8 flex flex-col justify-center text-luxury-black"
+            >
+              <h3 className="text-xl font-serif mb-4 italic">Our <br />Approach</h3>
+              <p className="text-xs leading-relaxed uppercase tracking-tighter opacity-70">We start every <br />skin service <br />with an honest <br />consultation.</p>
+              <Link to="/book" className="mt-6 text-[10px] tracking-widest font-bold uppercase border-b border-luxury-black inline-block">Book a Skin Consultation</Link>
+            </motion.div>
           </div>
         </div>
       </section>
@@ -405,7 +404,7 @@ export default function Home() {
           <div className="flex justify-center space-x-1 mb-8">
             {[...Array(5)].map((_, i) => <Star key={i} size={16} className="text-gold fill-gold" />)}
           </div>
-          <motion.p 
+          <motion.p
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             className="text-2xl md:text-4xl font-serif italic mb-12 leading-relaxed"
@@ -430,8 +429,8 @@ export default function Home() {
             Ready for a <br />
             <span className="italic">Fresh Start?</span>
           </h2>
-          <Link 
-            to="/book" 
+          <Link
+            to="/book"
             className="inline-block px-12 py-6 bg-luxury-black text-gold text-sm tracking-[0.4em] uppercase font-bold hover:bg-white transition-colors"
           >
             Book Your Appointment
