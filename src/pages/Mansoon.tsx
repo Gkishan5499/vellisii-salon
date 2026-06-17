@@ -947,6 +947,7 @@ export default function Mansoon() {
           </div>
 
           {/* Individual Stylists Grid */}
+          {/* 
           <div className="mt-16 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6">
             {monsoonStylists.map((stylist) => (
               <motion.div
@@ -980,6 +981,7 @@ export default function Mansoon() {
               </motion.div>
             ))}
           </div>
+          */}
         </section>
 
         {/* FAQ Section */}

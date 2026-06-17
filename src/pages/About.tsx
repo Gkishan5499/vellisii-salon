@@ -285,6 +285,7 @@ export default function About() {
                 </div>
 
                 {/* Individual Members Grid */}
+                {/* 
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6">
                   {teamCategories.monsoon.members.map((stylist) => (
                     <motion.div
@@ -318,6 +319,7 @@ export default function About() {
                     </motion.div>
                   ))}
                 </div>
+                */}
               </motion.div>
             ) : (
               <motion.div

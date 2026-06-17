@@ -137,7 +137,7 @@ const illumisGallery = [
   { id: 2, image: '/assets/images/illumis_clinic_1.jpeg', title: 'Advanced Treatment Room' },
   { id: 3, image: '/assets/images/illumis_clinic_2.jpeg', title: 'Laser & Rejuvenation Suite' },
   { id: 4, image: '/assets/images/illumis_clinic_3.jpeg', title: 'Recovery & Infusion Lounge' },
-  { id: 5, image: '/assets/images/illumis_clinic_4.jpeg', title: 'Aesthetic Examination Wing' }
+  // { id: 5, image: '/assets/images/illumis_clinic_4.jpeg', title: 'Aesthetic Examination Wing' }
 ];
 
 const illumisSpecialists = [
@@ -158,7 +158,7 @@ export default function Illumis() {
   const [openFaq, setOpenFaq] = useState<number | null>(null);
   const [activeProtocolTab, setActiveProtocolTab] = useState<'injectables' | 'peels'>('injectables');
   const [selectedImage, setSelectedImage] = useState<string | null>(null);
-  
+
   const handleWhatsAppEnquiry = (itemName: string) => {
     const message = `Hi Illumis, I'm interested in booking the "${itemName}" treatment from your advanced menu. Could you please provide more details?`;
     const url = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`;
@@ -228,11 +228,10 @@ export default function Illumis() {
               <button
                 key={catIdx}
                 onClick={() => setActiveTab(catIdx)}
-                className={`flex items-center gap-3 px-6 py-4 rounded-2xl border text-xs tracking-[0.2em] uppercase font-bold shrink-0 transition-all duration-500 cursor-pointer ${
-                  isActive
-                    ? 'bg-gold text-luxury-black border-gold shadow-[0_0_20px_rgba(212,175,55,0.3)]'
-                    : 'bg-white/[0.02] text-white/50 border-white/5 hover:border-gold/30 hover:text-white'
-                }`}
+                className={`flex items-center gap-3 px-6 py-4 rounded-2xl border text-xs tracking-[0.2em] uppercase font-bold shrink-0 transition-all duration-500 cursor-pointer ${isActive
+                  ? 'bg-gold text-luxury-black border-gold shadow-[0_0_20px_rgba(212,175,55,0.3)]'
+                  : 'bg-white/[0.02] text-white/50 border-white/5 hover:border-gold/30 hover:text-white'
+                  }`}
               >
                 {getIcon()}
                 <span>{category.category}</span>
@@ -302,11 +301,10 @@ export default function Illumis() {
                           window.scrollTo({ top: y, behavior: 'smooth' });
                         }
                       }}
-                      className={`w-full flex items-center gap-3 px-5 py-4 text-left text-xs tracking-[0.15em] uppercase font-bold transition-all ${
-                        isActive
-                          ? 'bg-gold/10 text-gold font-bold'
-                          : 'text-white/60 hover:bg-white/[0.02] hover:text-white'
-                      }`}
+                      className={`w-full flex items-center gap-3 px-5 py-4 text-left text-xs tracking-[0.15em] uppercase font-bold transition-all ${isActive
+                        ? 'bg-gold/10 text-gold font-bold'
+                        : 'text-white/60 hover:bg-white/[0.02] hover:text-white'
+                        }`}
                     >
                       {getIcon()}
                       <span>{category.category}</span>
@@ -327,9 +325,8 @@ export default function Illumis() {
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: -15 }}
               transition={{ duration: 0.4 }}
-              className={`relative overflow-hidden border rounded-[2rem] bg-white/[0.02] backdrop-blur-sm ${
-                activeTab % 2 === 0 ? 'border-gold/10' : 'border-white/10'
-              }`}
+              className={`relative overflow-hidden border rounded-[2rem] bg-white/[0.02] backdrop-blur-sm ${activeTab % 2 === 0 ? 'border-gold/10' : 'border-white/10'
+                }`}
             >
               <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-gold/40 to-transparent" />
               <div className="p-6 md:p-8 lg:p-10">
@@ -481,11 +478,10 @@ export default function Illumis() {
               <button
                 type="button"
                 onClick={() => setActiveProtocolTab('injectables')}
-                className={`flex items-center justify-center gap-2 px-6 py-4 rounded-xl border text-xs tracking-widest uppercase font-bold transition-all duration-300 cursor-pointer ${
-                  activeProtocolTab === 'injectables'
-                    ? 'bg-gold text-luxury-black border-gold shadow-[0_0_15px_rgba(212,175,55,0.2)]'
-                    : 'bg-white/[0.02] text-white/50 border-white/5 hover:border-gold/25'
-                }`}
+                className={`flex items-center justify-center gap-2 px-6 py-4 rounded-xl border text-xs tracking-widest uppercase font-bold transition-all duration-300 cursor-pointer ${activeProtocolTab === 'injectables'
+                  ? 'bg-gold text-luxury-black border-gold shadow-[0_0_15px_rgba(212,175,55,0.2)]'
+                  : 'bg-white/[0.02] text-white/50 border-white/5 hover:border-gold/25'
+                  }`}
               >
                 <ClipboardList size={16} />
                 <span>Injectables & Skin Boosters</span>
@@ -493,11 +489,10 @@ export default function Illumis() {
               <button
                 type="button"
                 onClick={() => setActiveProtocolTab('peels')}
-                className={`flex items-center justify-center gap-2 px-6 py-4 rounded-xl border text-xs tracking-widest uppercase font-bold transition-all duration-300 cursor-pointer ${
-                  activeProtocolTab === 'peels'
-                    ? 'bg-gold text-luxury-black border-gold shadow-[0_0_15px_rgba(212,175,55,0.2)]'
-                    : 'bg-white/[0.02] text-white/50 border-white/5 hover:border-gold/25'
-                }`}
+                className={`flex items-center justify-center gap-2 px-6 py-4 rounded-xl border text-xs tracking-widest uppercase font-bold transition-all duration-300 cursor-pointer ${activeProtocolTab === 'peels'
+                  ? 'bg-gold text-luxury-black border-gold shadow-[0_0_15px_rgba(212,175,55,0.2)]'
+                  : 'bg-white/[0.02] text-white/50 border-white/5 hover:border-gold/25'
+                  }`}
               >
                 <ClipboardList size={16} />
                 <span>Peels & Laser Therapies</span>
@@ -515,7 +510,7 @@ export default function Illumis() {
                 className="glass border border-gold/15 p-8 md:p-12 rounded-[2rem] relative overflow-hidden"
               >
                 <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-gold/30 to-transparent" />
-                
+
                 {activeProtocolTab === 'injectables' ? (
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
                     <div>
@@ -654,7 +649,7 @@ export default function Illumis() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
             {illumisGallery.map((item) => (
               <motion.div
                 key={item.id}
@@ -697,7 +692,7 @@ export default function Illumis() {
                 className="glass border border-gold/15 p-8 md:p-12 rounded-[2rem] relative overflow-hidden flex flex-col md:flex-row gap-8 md:gap-12 items-center"
               >
                 <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-gold/30 to-transparent" />
-                
+
                 {/* Profile Image */}
                 <div className="w-48 h-60 shrink-0 border border-gold/25 p-2 bg-neutral-950 relative overflow-hidden">
                   <img
@@ -721,7 +716,7 @@ export default function Illumis() {
                   <p className="text-white/60 text-sm leading-relaxed mb-6 font-light">
                     {spec.bio}
                   </p>
-                  
+
                   {/* Specialties List */}
                   <div className="mb-6">
                     <p className="text-[10px] tracking-[0.2em] uppercase text-white/40 font-bold mb-2">Core Clinical Specialties</p>
@@ -756,8 +751,8 @@ export default function Illumis() {
             {illumisFaqs.map((faq, idx) => {
               const isOpen = openFaq === idx;
               return (
-                <div 
-                  key={idx} 
+                <div
+                  key={idx}
                   className="border border-white/5 rounded-2xl bg-white/[0.01] overflow-hidden transition-all duration-300"
                 >
                   <button
