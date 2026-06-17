@@ -1,6 +1,6 @@
 import { motion, useScroll, useTransform, AnimatePresence } from 'motion/react';
 import { ArrowRight, Star, CheckCircle2, ChevronRight, Play } from 'lucide-react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { useRef, useState, useEffect } from 'react';
 
 const slides = [
@@ -35,7 +35,7 @@ const services = [
     title: 'Mansoon Special',
     image: '/assets/images/mansoon-hero.png',
     desc: 'Humid weather can be tough on hair and skin. Our seasonal treatments are designed to fight frizz, restore moisture, and keep you glowing.',
-    path: '/mansoon'
+    path: '/monsoon'
   },
   {
     title: 'ILLUMIS Aesthetics',
@@ -52,6 +52,7 @@ const services = [
 ];
 
 export default function Home() {
+  const navigate = useNavigate();
   const containerRef = useRef(null);
   const { scrollY } = useScroll();
   const y1 = useTransform(scrollY, [0, 500], [0, -150]);
@@ -137,11 +138,11 @@ export default function Home() {
                       </span>
                     </Link>
                     
-                    <Link to="/mansoon" className="group flex items-center space-x-4 text-white text-xs tracking-[0.3em] uppercase font-medium hover:text-gold transition-colors">
+                    <Link to="/monsoon" className="group flex items-center space-x-4 text-white text-xs tracking-[0.3em] uppercase font-medium hover:text-gold transition-colors">
                       <div className="w-12 h-12 rounded-full border border-white/20 flex items-center justify-center group-hover:border-gold transition-colors">
                         <Play size={14} className="fill-current ml-1" />
                       </div>
-                      <span>Explore Mansoon</span>
+                      <span>Explore Monsoon</span>
                     </Link>
                   </div>
                 </motion.div>
@@ -251,7 +252,7 @@ export default function Home() {
               <h5 className="text-gold tracking-[0.4em] uppercase text-sm mb-4">Our Craft</h5>
               <h2 className="text-4xl md:text-6xl font-serif">Signature <span className="italic">Experiences</span></h2>
             </div>
-            <Link to="/mansoon" className="group flex items-center space-x-3 text-gold tracking-[0.2em] uppercase text-xs">
+            <Link to="/monsoon" className="group flex items-center space-x-3 text-gold tracking-[0.2em] uppercase text-xs">
               <span>View Services</span>
               <ArrowRight size={16} className="group-hover:translate-x-2 transition-transform" />
             </Link>
@@ -266,7 +267,7 @@ export default function Home() {
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: idx * 0.1 }}
                 className="group relative h-[500px] overflow-hidden cursor-pointer"
-                onClick={() => window.location.href = service.path}
+                onClick={() => navigate(service.path)}
               >
                 <img 
                   src={service.image} 
@@ -309,8 +310,8 @@ export default function Home() {
                     </li>
                   ))}
                 </ul>
-                <Link to="/mansoon" className="text-gold border-b border-gold/30 hover:border-gold pb-1 text-xs tracking-widest uppercase transition-all inline-block">
-                  Discover Mansoon
+                <Link to="/monsoon" className="text-gold border-b border-gold/30 hover:border-gold pb-1 text-xs tracking-widest uppercase transition-all inline-block">
+                  Discover Monsoon
                 </Link>
               </motion.div>
             </div>
