@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { motion, AnimatePresence } from 'motion/react';
-import { Sparkles, MessageCircle, Scissors, Heart, Eye, Brush, User, Zap, Info, CheckCircle2, ClipboardList, X, Maximize2, ChevronLeft, ChevronRight } from 'lucide-react';
+import { Sparkles, MessageCircle, Scissors, Heart, Eye, Brush, User, Zap, Info, CheckCircle2, ClipboardList, X, Maximize2, ChevronLeft, ChevronRight, ChevronDown } from 'lucide-react';
 
 type ServiceItem = {
   name: string;
@@ -324,6 +324,7 @@ const monsoonStylists = [
 export default function Mansoon() {
   const whatsappNumber = "919862224291";
   const [activeTab, setActiveTab] = useState(0);
+  const [isDropdownOpen, setIsDropdownOpen] = useState(false);
   const [openFaq, setOpenFaq] = useState<number | null>(null);
   const [activeProtocolTab, setActiveProtocolTab] = useState<'hair' | 'pmu'>('hair');
   const [selectedImage, setSelectedImage] = useState<string | null>(null);
@@ -377,8 +378,8 @@ export default function Mansoon() {
           </div>
         </div>
 
-        {/* Tab Selection */}
-        <div className="sticky top-[72px] lg:top-[88px] z-30 bg-luxury-black/95 backdrop-blur-md py-4 -mx-6 px-6 flex overflow-x-auto no-scrollbar gap-3 mb-16 scroll-smooth border-b border-white/5">
+        {/* Desktop Tab Selection */}
+        <div className="hidden md:flex sticky top-[72px] lg:top-[88px] z-30 bg-luxury-black/95 backdrop-blur-md py-4 -mx-6 px-6 overflow-x-auto no-scrollbar gap-3 mb-16 scroll-smooth border-b border-white/5">
           {allMonsoonServices.map((category, catIdx) => {
             const isActive = activeTab === catIdx;
             const getIcon = () => {
@@ -412,8 +413,89 @@ export default function Mansoon() {
           })}
         </div>
 
+        {/* Mobile Dropdown Category Selector */}
+        <div className="md:hidden sticky top-[72px] z-30 bg-luxury-black/95 backdrop-blur-md py-4 px-6 -mx-6 mb-12 border-b border-white/5 relative">
+          <button
+            onClick={() => setIsDropdownOpen(!isDropdownOpen)}
+            className="w-full flex items-center justify-between px-5 py-4 rounded-2xl border border-gold/30 bg-white/[0.02] text-white font-bold text-xs tracking-[0.15em] uppercase transition-all duration-300"
+          >
+            <div className="flex items-center gap-3">
+              {(() => {
+                const iconClass = 'text-gold';
+                switch (activeTab) {
+                  case 0: return <Scissors className={iconClass} size={18} />;
+                  case 1: return <Sparkles className={iconClass} size={18} />;
+                  case 2: return <Heart className={iconClass} size={18} />;
+                  case 3: return <Zap className={iconClass} size={18} />;
+                  case 4: return <Brush className={iconClass} size={18} />;
+                  case 5: return <Eye className={iconClass} size={18} />;
+                  case 6: return <User className={iconClass} size={18} />;
+                  default: return <Sparkles className={iconClass} size={18} />;
+                }
+              })()}
+              <span className="truncate max-w-[200px]">{allMonsoonServices[activeTab].category}</span>
+            </div>
+            <ChevronDown className={`text-gold transition-transform duration-300 ${isDropdownOpen ? 'rotate-180' : ''}`} size={18} />
+          </button>
+
+          {isDropdownOpen && (
+            <>
+              <div className="fixed inset-0 z-40 bg-transparent" onClick={() => setIsDropdownOpen(false)} />
+              <motion.div
+                initial={{ opacity: 0, y: -10 }}
+                animate={{ opacity: 1, y: 0 }}
+                exit={{ opacity: 0, y: -10 }}
+                transition={{ duration: 0.2 }}
+                className="absolute left-6 right-6 mt-2 bg-luxury-black/98 border border-gold/20 rounded-2xl overflow-hidden shadow-[0_10px_30px_rgba(0,0,0,0.8)] z-50 divide-y divide-white/5"
+              >
+                {allMonsoonServices.map((category, catIdx) => {
+                  const isActive = activeTab === catIdx;
+                  const getIcon = () => {
+                    const iconClass = isActive ? 'text-gold' : 'text-white/40';
+                    switch (catIdx) {
+                      case 0: return <Scissors className={iconClass} size={16} />;
+                      case 1: return <Sparkles className={iconClass} size={16} />;
+                      case 2: return <Heart className={iconClass} size={16} />;
+                      case 3: return <Zap className={iconClass} size={16} />;
+                      case 4: return <Brush className={iconClass} size={16} />;
+                      case 5: return <Eye className={iconClass} size={16} />;
+                      case 6: return <User className={iconClass} size={16} />;
+                      default: return <Sparkles className={iconClass} size={16} />;
+                    }
+                  };
+
+                  return (
+                    <button
+                      key={catIdx}
+                      onClick={() => {
+                        setActiveTab(catIdx);
+                        setIsDropdownOpen(false);
+                        // Scroll to details section on mobile
+                        const element = document.getElementById('category-details');
+                        if (element) {
+                          const yOffset = -150;
+                          const y = element.getBoundingClientRect().top + window.pageYOffset + yOffset;
+                          window.scrollTo({ top: y, behavior: 'smooth' });
+                        }
+                      }}
+                      className={`w-full flex items-center gap-3 px-5 py-4 text-left text-xs tracking-[0.15em] uppercase font-bold transition-all ${
+                        isActive
+                          ? 'bg-gold/10 text-gold font-bold'
+                          : 'text-white/60 hover:bg-white/[0.02] hover:text-white'
+                      }`}
+                    >
+                      {getIcon()}
+                      <span>{category.category}</span>
+                    </button>
+                  );
+                })}
+              </motion.div>
+            </>
+          )}
+        </div>
+
         {/* Category Details */}
-        <div className="min-h-[400px]">
+        <div id="category-details" className="min-h-[400px]">
           <AnimatePresence mode="wait">
             <motion.article
               key={activeTab}

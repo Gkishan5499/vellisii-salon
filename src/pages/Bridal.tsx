@@ -5,7 +5,6 @@ import { Link } from 'react-router-dom';
 const bridalPackages = [
   {
     name: 'The Royal Bride',
-    price: '₹1,00,000',
     desc: 'The ultimate luxury experience spanning across two days to ensure perfection.',
     features: [
       'Traditional or Airbrush HD Makeup',
@@ -18,7 +17,6 @@ const bridalPackages = [
   },
   {
     name: 'The Classic Muse',
-    price: '₹60,000',
     desc: 'Bespoke elegance for the modern bride who values minimalist luxury.',
     features: [
       'Bespoke Bridal Makeup',
@@ -30,7 +28,6 @@ const bridalPackages = [
   },
   {
     name: 'Groom Luxury Suite',
-    price: '₹25,000',
     desc: 'Precision grooming for the modern gentleman.',
     features: [
       'Professional Wedding Haircut',
@@ -84,11 +81,10 @@ export default function Bridal() {
                transition={{ duration: 0.5, delay: idx * 0.1 }}
                className="glass p-10 flex flex-col border border-gold/10 hover:border-gold/40 transition-colors group"
              >
-                <div className="flex justify-between items-start mb-8">
+                <div className="mb-8">
                    <div className="w-12 h-12 glass border border-gold/30 flex items-center justify-center text-gold">
                       {idx === 0 ? <Stars size={24} /> : idx === 1 ? <Heart size={24} /> : <Gift size={24} />}
                    </div>
-                   <span className="text-2xl font-serif text-gold">{pkg.price}</span>
                 </div>
                 <h3 className="text-3xl font-serif mb-4 group-hover:text-gold transition-colors">{pkg.name}</h3>
                 <p className="text-white/50 text-sm mb-10 leading-relaxed italic">{pkg.desc}</p>
