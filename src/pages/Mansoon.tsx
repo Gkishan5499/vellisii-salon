@@ -30,10 +30,10 @@ const allMonsoonServices: ServiceCategory[] = [
         name: 'Haircuts & Styling',
         image: '/assets/images/services/haircuts_styling.png',
         items: [
-          { name: 'Creative Haircut (Men/Women)', price: 'Starting from ₹5,000', desc: 'A bespoke haircut designed by our experts to enhance your facial features, hair type, and personal aesthetic.' },
-          { name: 'Advanced Designer Cut (Senior Stylist)', price: 'Starting from ₹7,500', desc: 'Premium, trend-focused structural transformations and precision styling executed by our master stylists.' },
-          { name: 'Shampoo & Luxury Blow Dry', price: 'Starting from ₹3,500', desc: 'A refreshing scalp cleanse followed by a professional boutique blowout for maximum bounce, shine, and volume.' },
-          { name: 'Ironing / Curling / Tong Styling', price: 'Starting from ₹4,000', desc: 'Expert hot-tool texture adjustments, from sleek pin-straight strands to glamorous runway curls.' },
+          { name: 'Creative Haircut (Men/Women)', price: '₹5,000', desc: 'A bespoke haircut designed by our experts to enhance your facial features, hair type, and personal aesthetic.' },
+          { name: 'Advanced Designer Cut (Senior Stylist)', price: '₹7,500', desc: 'Premium, trend-focused structural transformations and precision styling executed by our master stylists.' },
+          { name: 'Shampoo & Luxury Blow Dry', price: '₹3,500', desc: 'A refreshing scalp cleanse followed by a professional boutique blowout for maximum bounce, shine, and volume.' },
+          { name: 'Ironing / Curling / Tong Styling', price: '₹4,000', desc: 'Expert hot-tool texture adjustments, from sleek pin-straight strands to glamorous runway curls.' },
           { name: 'Bridal & Occasion Hair Styling', price: 'Upon Consultation', desc: 'Exquisite, secure, and camera-ready updos or open hair designs tailored for your most memorable milestones.' }
         ]
       },
@@ -41,10 +41,10 @@ const allMonsoonServices: ServiceCategory[] = [
         name: 'Hair Treatments',
         image: '/assets/images/services/hair_treatments.png',
         items: [
-          { name: 'Signature Hair Spa Rituals', price: 'Starting from ₹6,500', desc: 'Deep-conditioning therapies that intensely nourish the hair roots and strands, reversing environmental damage.' },
-          { name: 'Keratin / Smoothening / Rebonding', price: 'Starting from ₹20,000', desc: 'High-performance systems that eliminate stubborn frizz, tame unruly texture, and lock in mirror-like smoothness.' },
-          { name: 'Hair Botox Therapy', price: 'Starting from ₹25,000', desc: 'An advanced anti-aging, deep-reconstruction treatment that pumps vital nutrients, proteins, and intense hydration back into depleted hair fibers.' },
-          { name: 'Scalp Detox & Anti-Dandruff Therapy', price: 'Starting from ₹5,500', desc: 'Clears stubborn product buildup, regulates excess oil production, and soothes itchy, flaky scalps.' },
+          { name: 'Signature Hair Spa Rituals', price: '₹6,500', desc: 'Deep-conditioning therapies that intensely nourish the hair roots and strands, reversing environmental damage.' },
+          { name: 'Keratin / Smoothening / Rebonding', price: '₹20,000', desc: 'High-performance systems that eliminate stubborn frizz, tame unruly texture, and lock in mirror-like smoothness.' },
+          { name: 'Hair Botox Therapy', price: '₹25,000', desc: 'An advanced anti-aging, deep-reconstruction treatment that pumps vital nutrients, proteins, and intense hydration back into depleted hair fibers.' },
+          { name: 'Scalp Detox & Anti-Dandruff Therapy', price: '₹5,500', desc: 'Clears stubborn product buildup, regulates excess oil production, and soothes itchy, flaky scalps.' },
           { name: 'Intensive Hair Fall Control Program (with Advanced Laser Therapy)', price: 'Upon Consultation', desc: 'A multi-step clinical regimen combining active serums with low-level laser stimulation to reactivate dormant hair follicles and arrest shedding.' }
         ]
       },
@@ -52,10 +52,10 @@ const allMonsoonServices: ServiceCategory[] = [
         name: 'Hair Colouring',
         image: '/assets/images/services/hair_colouring.png',
         items: [
-          { name: 'Global Colour / Root Touch-Up', price: 'Starting from ₹6,000', desc: 'Seamless, rich color from root to tip, or a precise refresh to camouflage gray hair and new regrowth.' },
-          { name: 'Highlights / Balayage / Ombre', price: 'Starting from ₹15,000', desc: 'Hand-painted dimension that adds depth, sun-kissed warmth, or bold, high-contrast color shifts to your hair.' },
-          { name: 'Fashion & Premium Shades', price: 'Starting from ₹12,000', desc: 'Custom-blended vivid statement tones created specifically to reflect your bold personality.' },
-          { name: 'Ammonia-Free Colour Services', price: 'Starting from ₹8,000', desc: 'Gentle, damage-minimizing premium formulations that protect your hair’s natural moisture and integrity.' }
+          { name: 'Global Colour / Root Touch-Up', price: '₹6,000', desc: 'Seamless, rich color from root to tip, or a precise refresh to camouflage gray hair and new regrowth.' },
+          { name: 'Highlights / Balayage / Ombre', price: '₹15,000', desc: 'Hand-painted dimension that adds depth, sun-kissed warmth, or bold, high-contrast color shifts to your hair.' },
+          { name: 'Fashion & Premium Shades', price: '₹12,000', desc: 'Custom-blended vivid statement tones created specifically to reflect your bold personality.' },
+          { name: 'Ammonia-Free Colour Services', price: '₹8,000', desc: 'Gentle, damage-minimizing premium formulations that protect your hair’s natural moisture and integrity.' }
         ]
       }
     ]
@@ -77,7 +77,7 @@ const allMonsoonServices: ServiceCategory[] = [
         name: 'Advanced Aesthetic Facials',
         image: '/assets/images/services/aesthetic_facials.png',
         items: [
-          { name: 'HydraFacial (Customised as per Skin Type)', price: 'Starting from ₹15,000', desc: 'A revolutionary multi-step vortex system that cleanses, extracts, and infuses custom skin serums to combat Acne, Pigmentation, Aging, or Dehydration.' },
+          { name: 'HydraFacial (Customised as per Skin Type)', price: '₹15,000', desc: 'A revolutionary multi-step vortex system that cleanses, extracts, and infuses custom skin serums to combat Acne, Pigmentation, Aging, or Dehydration.' },
           { name: 'Carboxy Facial Therapy (CO₂ Skin Rejuvenation)', price: '₹14,000', desc: 'A non-invasive treatment using carbon dioxide to trigger a sudden rush of oxygen and nutrients, instantly plumping and brightening your complexion.' },
           { name: 'BB Glow Treatment (Semi-Permanent Skin Glow & Tone Correction)', price: '₹18,000', desc: 'A gentle micro-infusion of nutrient-dense pigmented serum just beneath the skin\'s surface, giving you an everyday, flawless, airbrushed look without makeup.' }
         ]
@@ -99,7 +99,7 @@ const allMonsoonServices: ServiceCategory[] = [
         image: '/assets/images/services/clinical_skin.png',
         items: [
           { name: 'Bollywood Peel (Instant Glow & Skin Renewal)', price: '₹15,000', desc: 'A celebrity-favorite exfoliating peel that gently sweeps away dead skin cells for an immediate, camera-ready glow.' },
-          { name: 'Chemical Peels (Acne / Pigmentation / Anti-Ageing)', price: 'Starting from ₹8,000', desc: 'Dermatological-grade peeling agents that target deeper skin layers to erase acne breakouts, rough texture, and dark patches.' },
+          { name: 'Chemical Peels (Acne / Pigmentation / Anti-Ageing)', price: '₹8,000', desc: 'Dermatological-grade peeling agents that target deeper skin layers to erase acne breakouts, rough texture, and dark patches.' },
           { name: 'Microdermabrasion / Skin Polishing', price: '₹7,500', desc: 'A precise, diamond-tip physical exfoliation method that polishes away rough patches, scars, and dull surface cells.' },
           { name: 'Skin Whitening & Brightening Treatment', price: '₹12,000', desc: 'Clinical formulations designed to regulate melanin synthesis, giving you a significantly brighter and beautifully balanced skin tone.' },
           { name: 'Under Eye Rejuvenation', price: '₹6,000', desc: 'Focused care using advanced serums to target dark circles, hollow under-eyes, and persistent puffiness.' }
@@ -172,8 +172,8 @@ const allMonsoonServices: ServiceCategory[] = [
         name: 'Luxury Nail Art Studio',
         image: '/assets/images/services/nail_art.png',
         items: [
-          { name: 'Premium Nail Art (Minimal | French | Chrome | Ombre)', price: 'Starting from ₹1,000', desc: 'Modern, high-end accents ranging from clean geometric lines and classic French tips to liquid metallic chrome and smooth color transitions.' },
-          { name: 'Advanced Designer Nails (3D | Swarovski | Bridal Nails)', price: 'Starting from ₹2,500', desc: 'Hand-crafted 3D art, genuine luxury Swarovski crystals, and custom bridal themes designed for your big day.' },
+          { name: 'Premium Nail Art (Minimal | French | Chrome | Ombre)', price: '₹1,000', desc: 'Modern, high-end accents ranging from clean geometric lines and classic French tips to liquid metallic chrome and smooth color transitions.' },
+          { name: 'Advanced Designer Nails (3D | Swarovski | Bridal Nails)', price: '₹2,500', desc: 'Hand-crafted 3D art, genuine luxury Swarovski crystals, and custom bridal themes designed for your big day.' },
           { name: 'Trend-Based Graphic Nails', price: 'Upon Consultation', desc: 'Bold patterns, abstract street-style graphics, and custom art created directly from your personal design references.' }
         ]
       }
@@ -374,7 +374,7 @@ export default function Mansoon() {
             </h2>
           </div>
           <div className="max-w-md text-white/45 text-sm leading-relaxed">
-            Explore the collection by category. Each service is presented with clear pricing, premium techniques, and a quick WhatsApp enquiry option.
+            Explore the collection by category. Each service is presented with premium techniques and a quick WhatsApp enquiry option.
           </div>
         </div>
 
@@ -538,7 +538,6 @@ export default function Mansoon() {
                     <span className="px-4 py-2 rounded-full border border-white/10">
                       {allMonsoonServices[activeTab].sections.length} sections
                     </span>
-                    <span className="px-4 py-2 rounded-full border border-white/10">Premium pricing</span>
                     <span className="px-4 py-2 rounded-full border border-white/10">WhatsApp enquiry</span>
                   </div>
                 </div>
@@ -576,11 +575,10 @@ export default function Mansoon() {
                                 key={itemIdx}
                                 className="group rounded-2xl border border-white/5 bg-white/[0.02] p-4 md:p-5 hover:border-gold/25 hover:bg-gold/[0.03] transition-all"
                               >
-                                <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-3 mb-2">
+                                <div className="mb-2">
                                   <h5 className="text-base md:text-lg font-serif group-hover:text-gold transition-colors">
                                     {item.name}
                                   </h5>
-                                  <span className="text-gold/85 italic font-serif text-sm shrink-0">{item.price}</span>
                                 </div>
 
                                 {item.desc && (

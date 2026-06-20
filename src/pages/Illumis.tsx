@@ -58,7 +58,7 @@ const illumisCategories: ServiceCategory[] = [
   {
     category: 'Wellness & IV Drip Therapies',
     description: 'True beauty starts from within. The Illumis IV Drip Therapies deliver essential vitamins, minerals, and hydration directly into your bloodstream for maximum absorption and instant results.',
-    image: '/assets/images/services/relaxation_therapies.png',
+    image: '/assets/images/wellness_iv_drip.png',
     items: [
       { name: 'Glow IV Drips', desc: 'Infused with powerful antioxidants and vitamins to brighten your complexion and give your skin a luminous, healthy glow from the inside out.', price: 'Upon Consultation' },
       { name: 'Anti-Aging IV Therapies', desc: 'A potent blend of cellular-repair nutrients designed to combat oxidative stress and slow the natural aging process.', price: 'Upon Consultation' },

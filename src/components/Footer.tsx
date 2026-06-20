@@ -51,8 +51,17 @@ export default function Footer() {
               <span>vellisii2026@gmail.com</span>
             </li>
             <li className="flex items-start space-x-3">
-              <MapPin size={16} className="text-gold mt-1" />
-              <span>Opposite to Blackberry Showroom,<br />A - Sector, Naharlagun, Arunachal Pradesh 791110</span>
+              <MapPin size={16} className="text-gold mt-1 shrink-0" />
+              <div className="text-xs space-y-3 text-white/50">
+                <div>
+                  <span className="text-gold font-bold block mb-0.5">ILLUMIS Location:</span>
+                  <span>Near Monsoon Pro Salon, opposite to Blackberry Showroom,<br />A - Sector, Naharlagun, AP 791110</span>
+                </div>
+                <div>
+                  <span className="text-gold font-bold block mb-0.5">Monsoon Location:</span>
+                  <span>Near Illumis Clinic, opposite to Blackberry Showroom,<br />A - Sector, Naharlagun, AP 791110</span>
+                </div>
+              </div>
             </li>
           </ul>
         </div>

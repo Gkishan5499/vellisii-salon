@@ -30,7 +30,7 @@ export default function Contact() {
                 <Phone className="text-gold mb-6" size={28} />
                 <h4 className="text-gold tracking-[0.2em] uppercase text-[10px] mb-2 font-medium">Call Us</h4>
                 <p className="text-xl font-serif">+91 98632 46754 <br />+91 8729-826683</p>
-                <p className="text-white/30 text-xs mt-2">Mon - Sat: 9am - 8pm</p>
+                <p className="text-white/30 text-xs mt-2">Mon - Sun: 10:30am - 8:00pm</p>
               </motion.div>
 
               <motion.div
@@ -44,26 +44,31 @@ export default function Contact() {
               </motion.div>
             </div>
 
-            <div className="glass p-10 border border-gold/10">
-              <MapPin className="text-gold mb-6" size={28} />
-              <h4 className="text-gold tracking-[0.2em] uppercase text-[10px] mb-2 font-medium">Visit Our Atelier</h4>
-              <p className="text-xl font-serif mb-4 leading-relaxed">
-                Opposite to Blackberry Showroom,<br />A - Sector, Naharlagun, Arunachal Pradesh 791110
-              </p>
+            <div className="glass p-10 border border-gold/10 space-y-8">
+              <div>
+                <MapPin className="text-gold mb-4" size={28} />
+                <h4 className="text-gold tracking-[0.2em] uppercase text-[10px] mb-2 font-medium">ILLUMIS Clinic</h4>
+                <p className="text-lg font-serif leading-relaxed text-white">
+                  Near Monsoon Pro Salon, opposite to Blackberry Showroom,<br />
+                  A - Sector, Naharlagun, Arunachal Pradesh 791110
+                </p>
+              </div>
+
+              <div className="border-t border-white/5 pt-8">
+                <MapPin className="text-gold mb-4" size={28} />
+                <h4 className="text-gold tracking-[0.2em] uppercase text-[10px] mb-2 font-medium">Monsoon Pro Salon</h4>
+                <p className="text-lg font-serif leading-relaxed text-white">
+                  Near Illumis Clinic, opposite to Blackberry Showroom,<br />
+                  A - Sector, Naharlagun, Arunachal Pradesh 791110
+                </p>
+              </div>
+
               <div className="pt-6 border-t border-white/5">
                 <h5 className="text-white/60 uppercase text-[10px] tracking-[0.3em] mb-4">Opening Hours</h5>
                 <div className="space-y-3">
                   <div className="flex justify-between text-sm">
-                    <span className="text-white/40">Weekday</span>
-                    <span>09:00 AM — 08:00 PM</span>
-                  </div>
-                  <div className="flex justify-between text-sm">
-                    <span className="text-white/40">Saturday</span>
-                    <span>10:00 AM — 09:00 PM</span>
-                  </div>
-                  <div className="flex justify-between text-sm">
-                    <span className="text-white/40">Sunday</span>
-                    <span className="text-gold italic font-serif">By Exclusive Appointment</span>
+                    <span className="text-white/40">Monday — Sunday</span>
+                    <span>10:30 AM — 08:00 PM</span>
                   </div>
                 </div>
               </div>
