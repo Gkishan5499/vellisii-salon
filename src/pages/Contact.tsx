@@ -75,7 +75,7 @@ export default function Contact() {
 
               <div className="border-t border-white/5 pt-8">
                 <MapPin className="text-gold mb-4" size={28} />
-                <h4 className="text-gold tracking-[0.2em] uppercase text-[25px] mb-2 font-medium">MONSOON SALOON PRO</h4>
+                <h4 className="text-gold tracking-[0.2em] uppercase text-[25px] mb-2 font-medium">MONSOON SALON PRO</h4>
                 <p className="text-[15px] font-serif leading-relaxed text-white">
                   Near Illumis Aesthetic Clinic, opposite to Blackberry Showroom,<br />
                   A - Sector, Naharlagun, Arunachal Pradesh 791110
