@@ -30,7 +30,7 @@ export default function Contact() {
                 <Phone className="text-gold mb-6" size={28} />
                 <h4 className="text-gold tracking-[0.2em] uppercase text-[10px] mb-2 font-medium">Call Us</h4>
                 <p className="text-xl font-serif">+91 98632 46754 <br />+91 8729-826683</p>
-                <p className="text-white/30 text-xs mt-2">Mon - Sun: 10:30am - 8:00pm</p>
+          
               </motion.div>
 
               <motion.div
@@ -47,32 +47,47 @@ export default function Contact() {
             <div className="glass p-10 border border-gold/10 space-y-8">
               <div>
                 <MapPin className="text-gold mb-4" size={28} />
-                <h4 className="text-gold tracking-[0.2em] uppercase text-[10px] mb-2 font-medium">ILLUMIS Clinic</h4>
-                <p className="text-lg font-serif leading-relaxed text-white">
+                <h4 className="text-gold tracking-[0.2em] uppercase text-[25px] mb-2 font-medium">ILLUMIS AESTHETIC CLINIC</h4>
+                <p className="text-[15px] font-serif leading-relaxed text-white">
                   Near Monsoon Pro Salon, opposite to Blackberry Showroom,<br />
                   A - Sector, Naharlagun, Arunachal Pradesh 791110
+                </p>
+                <p className="text-lg font-serif leading-relaxed text-white">
+                 <span>Phone :</span> +91 98632 46754
                 </p>
                 <br/>
                  <button className="w-full py-5 border border-gold text-gold hover:bg-gold hover:text-luxury-black transition-all font-bold tracking-[0.3em] text-sm cursor-pointer uppercase flex items-center justify-center space-x-3"
               onClick={() => { window.open(" https://maps.app.goo.gl/FcCV9ktkpXGJGw327") }}>
-              <span>View Illumis Clinic on Map </span>
-              <MapIcon size={16} />
+              <span>View Illumis Aesthetic Clinic on Map </span>
+             
             </button>
+           </div>
 
+              <div className="pt-6 border-t border-white/5">
+                <h5 className="text-white/60 uppercase text-[10px] tracking-[0.3em] mb-4">Opening Hours</h5>
+                <div className="space-y-3">
+                  <div className="flex justify-between text-sm">
+                    <span className="text-white/40">Monday — Sunday</span>
+                    <span>10:30 AM — 08:00 PM</span>
+                  </div>
+                </div>
               </div>
 
               <div className="border-t border-white/5 pt-8">
                 <MapPin className="text-gold mb-4" size={28} />
-                <h4 className="text-gold tracking-[0.2em] uppercase text-[10px] mb-2 font-medium">Monsoon Pro Salon</h4>
-                <p className="text-lg font-serif leading-relaxed text-white">
-                  Near Illumis Clinic, opposite to Blackberry Showroom,<br />
+                <h4 className="text-gold tracking-[0.2em] uppercase text-[25px] mb-2 font-medium">MONSOON SALOON PRO</h4>
+                <p className="text-[15px] font-serif leading-relaxed text-white">
+                  Near Illumis Aesthetic Clinic, opposite to Blackberry Showroom,<br />
                   A - Sector, Naharlagun, Arunachal Pradesh 791110
+                </p>
+                <p className="text-lg font-serif leading-relaxed text-white">
+                 <span>Phone :</span>  +91 8729 826683
                 </p>
                 <br/>
                 <button className="w-full py-5 border border-gold text-gold hover:bg-gold hover:text-luxury-black transition-all font-bold tracking-[0.3em] text-sm cursor-pointer uppercase flex items-center justify-center space-x-3"
                   onClick={() => { window.open("https://maps.app.goo.gl/6QNbn2c5FpKNjs5x6") }}>
                   <span>View Monsoon Pro Salon on Map</span>
-                  <MapIcon size={16} />
+                 
                 </button>
               </div>
 
