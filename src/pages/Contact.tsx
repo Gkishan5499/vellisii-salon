@@ -52,6 +52,13 @@ export default function Contact() {
                   Near Monsoon Pro Salon, opposite to Blackberry Showroom,<br />
                   A - Sector, Naharlagun, Arunachal Pradesh 791110
                 </p>
+                <br/>
+                 <button className="w-full py-5 border border-gold text-gold hover:bg-gold hover:text-luxury-black transition-all font-bold tracking-[0.3em] text-sm cursor-pointer uppercase flex items-center justify-center space-x-3"
+              onClick={() => { window.open(" https://maps.app.goo.gl/FcCV9ktkpXGJGw327") }}>
+              <span>View Illumis Clinic on Map </span>
+              <MapIcon size={16} />
+            </button>
+
               </div>
 
               <div className="border-t border-white/5 pt-8">
@@ -61,6 +68,12 @@ export default function Contact() {
                   Near Illumis Clinic, opposite to Blackberry Showroom,<br />
                   A - Sector, Naharlagun, Arunachal Pradesh 791110
                 </p>
+                <br/>
+                <button className="w-full py-5 border border-gold text-gold hover:bg-gold hover:text-luxury-black transition-all font-bold tracking-[0.3em] text-sm cursor-pointer uppercase flex items-center justify-center space-x-3"
+                  onClick={() => { window.open("https://maps.app.goo.gl/6QNbn2c5FpKNjs5x6") }}>
+                  <span>View Monsoon Pro Salon on Map</span>
+                  <MapIcon size={16} />
+                </button>
               </div>
 
               <div className="pt-6 border-t border-white/5">
@@ -73,12 +86,6 @@ export default function Contact() {
                 </div>
               </div>
             </div>
-
-            <button className="w-full py-5 border border-gold text-gold hover:bg-gold hover:text-luxury-black transition-all font-bold tracking-[0.3em] text-sm cursor-pointer uppercase flex items-center justify-center space-x-3"
-              onClick={() => { window.open("https://maps.app.goo.gl/xcKHEJuZ4gZRBqxL8") }}>
-              <span>View on Google Maps</span>
-              <MapIcon size={16} />
-            </button>
           </div>
 
           {/* Contact Form / Map Placeholder */}
